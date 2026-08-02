@@ -30,6 +30,21 @@ document$.subscribe(function () {
     }
   }
 
+  // 轻量 toast 提示（用于操作过于频繁等场景）
+  function showToast(msg) {
+    var toast = document.createElement("div");
+    toast.className = "isc-pledge-toast";
+    toast.textContent = "⏳ " + msg;
+    document.body.appendChild(toast);
+    requestAnimationFrame(function () {
+      toast.classList.add("show");
+    });
+    setTimeout(function () {
+      toast.classList.remove("show");
+      setTimeout(function () { toast.remove(); }, 320);
+    }, 2600);
+  }
+
   // 页面加载时读取当前总次数（失败则静默，保持 0）
   fetch(PLEDGE_API)
     .then(function (r) { return r.json(); })
@@ -65,11 +80,21 @@ document$.subscribe(function () {
 
     showOverlay();
     fetch(PLEDGE_API, { method: "POST" })
-      .then(function (r) { return r.json(); })
+      .then(function (r) {
+        if (r.status === 429) {
+          // Worker 端 IP 限流：关闭刚弹出的弹窗，改用轻量提示
+          if (overlay) overlay.hidden = true;
+          showToast("操作太频繁，请稍后再试");
+          return null;
+        }
+        return r.json();
+      })
       .then(function (d) {
-        setCount(d.count);
-        showPledgeResult("您是第 <b>" + d.count + "</b> 位宣誓者", false);
-        localStorage.setItem(LAST_KEY, String(now));
+        if (d) {
+          setCount(d.count);
+          showPledgeResult("您是第 <b>" + d.count + "</b> 位宣誓者", false);
+          localStorage.setItem(LAST_KEY, String(now));
+        }
       })
       .catch(function () {
         // 即使计数请求失败，也记录本次点击，防止反复刷
