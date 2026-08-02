@@ -3,6 +3,7 @@
 # 供 Cloudflare Pages / CI 等 Linux 环境使用
 #
 # 用法：
+#   python -m pip install -r requirements.txt  # 首次安装锁定依赖
 #   bash build-site.sh          # 构建静态网站到 site/
 
 set -euo pipefail
@@ -17,11 +18,10 @@ else
   PY="python"                             # Cloudflare Pages / CI
 fi
 
-# ---- 首次运行安装依赖（已装则跳过） ----
+# ---- 检查构建依赖（由 requirements.txt 统一安装） ----
 if ! "$PY" -c "import material" 2>/dev/null; then
-  echo "首次运行：安装 mkdocs-material ..."
-  "$PY" -m pip install -q --upgrade pip
-  "$PY" -m pip install -q mkdocs-material
+  echo "缺少构建依赖，请先运行：$PY -m pip install -r requirements.txt" >&2
+  exit 1
 fi
 
 # ---- 同步内容到构建源目录（仓库 markdown 仍是唯一内容源） ----
