@@ -189,39 +189,6 @@
 
 ---
 
-## 静态网站
-
-本仓库内容可通过 [MkDocs](https://www.mkdocs.org/) + [Material 主题](https://squidfunk.github.io/mkdocs-material/) 渲染为静态网站，并提供组件化首页。仓库中的 markdown 是唯一内容源，构建产物不入库。
-
-**本地构建 / 预览**（首次运行会自动安装依赖）：
-
-```powershell
-.\build-site.ps1          # 构建静态网站到 site/（Windows）
-.\build-site.ps1 -Serve   # 启动本地预览：http://127.0.0.1:8000（静态预览，修改内容后需重新运行）
-```
-
-```bash
-bash build-site.sh        # 构建静态网站到 site/（Linux / CI）
-```
-
-**网站层匿名化**：构建时 `anonymize.py` 会把经验贴中的具体学校名替换为层次（985 / 双非 / 四非 等）、删除联系方式。仅作用于生成的 `docs_src/` 副本，仓库源文件保留原文。
-
-> `docs_src/`（临时构建源）与 `site/`（构建产物）由脚本自动生成，已加入 `.gitignore`。
-> 新增经验分享文章后，请记得在 `mkdocs.yml` 的 `nav` 与首页 `overrides/homepage.html` 中补充对应条目。
-
-**部署（Cloudflare Pages）**：在 Cloudflare Dashboard 中连接本仓库，创建 Pages 项目，按以下配置，之后每次 push 自动构建发布：
-
-| 配置项 | 值 |
-| --- | --- |
-| 框架预设 | 无（直接用命令） |
-| 构建命令 | `bash build-site.sh` |
-| 输出目录 | `site` |
-| 环境变量 | `PYTHON_VERSION` = `3.12` |
-
-部署后把 `mkdocs.yml` 的 `site_url` 改为你实际的 `*.pages.dev` 域名（或自定义域名）。
-
----
-
 ## 许可
 
 本指南采用 **CC BY-NC-SA 4.0** 许可协议，可自由分享与转载，但需注明出处，且不得用于商业用途。
