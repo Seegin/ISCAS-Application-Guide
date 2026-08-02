@@ -1,0 +1,9 @@
+# Python 虚拟环境
+.venv/
+
+# 静态网站构建产物（由 build-site.ps1 生成）
+site/
+docs_src/
+
+# Python 缓存
+__pycache__/

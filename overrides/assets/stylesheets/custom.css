@@ -1,0 +1,523 @@
+/* ============================================================
+   ISCAS 考研报考指南 · 全局自定义样式（Animate UI 风格）
+   简洁 · 渐变 · 大圆角卡片 · 兼顾浅色/深色模式
+   ============================================================ */
+
+/* ---------- 品牌色（覆盖 Material 主色，indigo 蓝紫系） ---------- */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #4f46e5;
+  --md-primary-fg-color--light: #818cf8;
+  --md-primary-fg-color--dark: #3730a3;
+  --md-accent-fg-color: #4f46e5;
+  --isc-grad-a: #4f46e5;
+  --isc-grad-b: #7c3aed;
+  --isc-accent: #4f46e5;
+  --isc-accent-soft: rgba(79, 70, 229, 0.08);
+  --isc-border: rgba(79, 70, 229, 0.14);
+  --isc-card-bg: #ffffff;
+  --isc-tip-bg: #fff7e6;
+  --isc-tip-border: #f59e0b;
+}
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #818cf8;
+  --md-primary-fg-color--light: #a5b4fc;
+  --md-primary-fg-color--dark: #3730a3;
+  --md-accent-fg-color: #818cf8;
+  --isc-grad-a: #818cf8;
+  --isc-grad-b: #c084fc;
+  --isc-accent: #818cf8;
+  --isc-accent-soft: rgba(129, 140, 248, 0.14);
+  --isc-border: rgba(129, 140, 248, 0.22);
+  --isc-card-bg: #151a23;
+  --isc-tip-bg: rgba(245, 158, 11, 0.12);
+  --isc-tip-border: #f59e0b;
+}
+
+/* ---------- 字体 ---------- */
+body {
+  font-family: -apple-system, "Segoe UI", "Microsoft YaHei",
+    "PingFang SC", "Noto Sans SC", "Source Han Sans SC", sans-serif;
+}
+
+/* ---------- 首页布局 ---------- */
+.isc-home {
+  max-width: 72rem;
+}
+
+/* ============ Hero ============ */
+.isc-hero {
+  position: relative;
+  text-align: center;
+  padding: 3rem 1.5rem 3rem;
+  margin: -1rem -1.4rem 0;
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--isc-accent-soft), transparent 75%);
+}
+/* 背景光斑（Animate UI 风格） */
+.isc-hero::before,
+.isc-hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.55;
+  pointer-events: none;
+}
+.isc-hero::before {
+  width: 380px; height: 380px;
+  top: -140px; left: -80px;
+  background: radial-gradient(circle, var(--isc-grad-a), transparent 70%);
+}
+.isc-hero::after {
+  width: 340px; height: 340px;
+  bottom: -120px; right: -60px;
+  background: radial-gradient(circle, var(--isc-grad-b), transparent 70%);
+}
+.isc-hero__title {
+  position: relative;
+  margin: 0 0 1rem;
+  font-size: 2.9rem;
+  line-height: 1.22;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--md-typeset-color) !important;
+}
+.isc-grad {
+  background: linear-gradient(120deg, var(--isc-grad-a), var(--isc-grad-b));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.isc-hero__subtitle {
+  position: relative;
+  margin: 0 auto 1.8rem;
+  max-width: 34rem;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--md-default-fg-color--light);
+}
+.isc-hero__actions {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+/* ---------- 按钮 ---------- */
+.isc-btn {
+  display: inline-block;
+  padding: 0.62rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.isc-btn:hover { transform: translateY(-2px); text-decoration: none; }
+/* 按钮文字颜色用更高优先级，避免被 Material 的 .md-typeset a 覆盖 */
+.md-typeset .isc-btn--primary {
+  background: linear-gradient(120deg, var(--isc-grad-a), var(--isc-grad-b));
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+}
+.md-typeset .isc-btn--primary:hover {
+  box-shadow: 0 8px 22px rgba(79, 70, 229, 0.4);
+  color: #fff;
+}
+.md-typeset .isc-btn--ghost {
+  background: var(--isc-card-bg);
+  color: var(--md-typeset-color);
+  border: 1px solid var(--isc-border);
+}
+.md-typeset .isc-btn--ghost:hover { border-color: var(--isc-accent); color: var(--md-typeset-color); }
+.md-typeset .isc-btn--soft {
+  background: var(--isc-accent-soft);
+  color: var(--isc-accent);
+  border: 1px solid var(--isc-border);
+}
+.md-typeset .isc-btn--soft:hover { background: var(--isc-accent); color: #fff; }
+
+/* ============ 数据统计条 ============ */
+.isc-stats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.8rem;
+  margin: 1.6rem 0 0;
+}
+.isc-stat {
+  padding: 1.05rem 0.5rem;
+  text-align: center;
+  border-radius: 16px;
+  background: var(--isc-card-bg);
+  border: 1px solid var(--isc-border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.isc-stat:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); }
+.isc-stat b {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-weight: 800;
+  background: linear-gradient(120deg, var(--isc-grad-a), var(--isc-grad-b));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.isc-stat span {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.76rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ============ Section 通用 ============ */
+.isc-section {
+  margin: 2.6rem 0 0;
+}
+.isc-section__head {
+  margin-bottom: 1.3rem;
+}
+.isc-pill {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  margin-bottom: 0.6rem;
+  border-radius: 999px;
+  background: var(--isc-accent-soft);
+  color: var(--isc-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.isc-section__head h2 {
+  margin: 0 0 0.3rem;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--md-typeset-color);
+}
+.isc-section__sub {
+  margin: 0;
+  max-width: 42rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+/* ---------- 实验室标签 ---------- */
+.isc-labs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+.isc-chip {
+  display: inline-block;
+  padding: 0.32rem 0.8rem;
+  border-radius: 999px;
+  background: var(--isc-card-bg);
+  border: 1px solid var(--isc-border);
+  color: var(--md-default-fg-color);
+  font-size: 0.8rem;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.isc-chip:hover { border-color: var(--isc-accent); transform: translateY(-1px); }
+.isc-links { display: flex; gap: 0.7rem; flex-wrap: wrap; }
+
+/* ---------- 性价比亮点 ---------- */
+.isc-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+}
+.isc-feature {
+  padding: 1.2rem 1.2rem 1.05rem;
+  border-radius: 16px;
+  background: var(--isc-card-bg);
+  border: 1px solid var(--isc-border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.isc-feature:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1); border-color: var(--isc-accent); }
+.isc-feature__icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.4rem; height: 2.4rem;
+  border-radius: 12px;
+  background: var(--isc-accent-soft);
+  font-size: 1.2rem;
+}
+.isc-feature b {
+  display: block;
+  margin: 0.6rem 0 0.3rem;
+  font-size: 1rem;
+  color: var(--md-typeset-color);
+}
+.isc-feature p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ---------- 理性看待提示 ---------- */
+.isc-tip {
+  margin: 1.1rem 0 0;
+  padding: 0.85rem 1.1rem;
+  border-radius: 14px;
+  background: var(--isc-tip-bg);
+  border-left: 4px solid var(--isc-tip-border);
+  font-size: 0.87rem;
+  line-height: 1.8;
+  color: var(--md-typeset-color);
+}
+
+/* ---------- 核心指南入口 ---------- */
+.isc-entry {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.isc-entry-card {
+  display: block;
+  padding: 1.6rem 1.6rem 1.3rem;
+  border-radius: 18px;
+  text-decoration: none;
+  color: var(--md-typeset-color);
+  background: var(--isc-card-bg);
+  border: 1px solid var(--isc-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.isc-entry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--isc-accent);
+  text-decoration: none;
+}
+.isc-entry-card__icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 3rem; height: 3rem;
+  border-radius: 14px;
+  font-size: 1.5rem;
+  background: var(--isc-accent-soft);
+}
+.isc-entry-card h3 { margin: 0.8rem 0 0.4rem; font-size: 1.2rem; font-weight: 800; color: var(--md-typeset-color); }
+.isc-entry-card p { margin: 0 0 0.8rem; font-size: 0.86rem; line-height: 1.7; color: var(--md-default-fg-color--light); }
+.isc-entry-card__more { font-size: 0.86rem; font-weight: 700; color: var(--isc-accent); }
+
+/* ---------- 经验贴卡片网格 ---------- */
+.isc-exp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+}
+.isc-exp-card {
+  position: relative;
+  display: block;
+  padding: 1.15rem 1.2rem;
+  border-radius: 16px;
+  text-decoration: none;
+  color: var(--md-typeset-color);
+  background: var(--isc-card-bg);
+  border: 1px solid var(--isc-border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.isc-exp-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--isc-accent);
+  text-decoration: none;
+}
+.isc-exp-card h4 {
+  margin: 0.55rem 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--md-typeset-color);
+}
+.isc-exp-card p {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ---------- 层次标签 ---------- */
+.isc-tag {
+  display: inline-block;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+.isc-tag--985 { background: #4f46e5; }
+.isc-tag--sf  { background: #059669; }
+.isc-tag--sf4 { background: #ea580c; }
+.isc-tag--mb  { background: #9333ea; }
+
+/* ---------- 投稿流程 ---------- */
+.isc-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+.isc-step {
+  position: relative;
+  padding: 1.4rem 1.4rem 1.2rem;
+  border-radius: 16px;
+  background: var(--isc-card-bg);
+  border: 1px solid var(--isc-border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+.isc-step__num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.2rem; height: 2.2rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(120deg, var(--isc-grad-a), var(--isc-grad-b));
+}
+.isc-step__body h4 {
+  margin: 0.7rem 0 0.3rem;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--md-typeset-color);
+}
+.isc-step__body p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--md-default-fg-color--light);
+}
+/* ---------- 标题右侧带按钮的 section 头部 ---------- */
+.isc-section__head--split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+.isc-section__head--split .isc-section__text { flex: 1 1 18rem; }
+.isc-section__head--split .isc-btn { flex: 0 0 auto; margin-bottom: 0.2rem; }
+
+/* ---------- 感谢名单 ---------- */
+.isc-thanks {
+  text-align: center;
+}
+.isc-thanks .isc-section__head { text-align: center; }
+.isc-thanks .isc-section__sub { margin-left: auto; margin-right: auto; }
+.isc-avatars {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin: 1.2rem 0 1rem;
+}
+.isc-avatar img {
+  display: block;
+  width: 54px; height: 54px;
+  border-radius: 50%;
+  border: 2px solid var(--isc-border);
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+.isc-avatar:hover img { transform: translateY(-3px); border-color: var(--isc-accent); }
+.isc-thanks__note {
+  margin: 0;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9rem;
+  line-height: 2;
+}
+
+/* ---------- 技术栈 ---------- */
+.isc-tech {
+  margin-top: 3rem;
+  padding: 1.2rem;
+  text-align: center;
+  border-radius: 14px;
+  background: var(--isc-card-bg);
+  border: 1px dashed var(--isc-border);
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+}
+.isc-tech b { color: var(--md-typeset-color); }
+
+/* ============ 内容页美化（全局） ============ */
+.md-typeset {
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+.md-typeset h1 { font-weight: 800; letter-spacing: -0.01em; }
+.md-typeset h2, .md-typeset h3 { font-weight: 700; }
+.md-typeset blockquote {
+  border-left: 0.25rem solid var(--isc-accent);
+  background: var(--isc-accent-soft);
+  border-radius: 0 10px 10px 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.6rem 1rem;
+}
+.md-typeset .admonition, .md-typeset details {
+  border-radius: 12px;
+  box-shadow: none;
+  border-width: 0;
+  border-left: 0.25rem solid var(--md-admonition-icon--note);
+}
+.md-typeset table:not([class]) {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+.md-typeset code { border-radius: 5px; }
+.md-typeset pre > code { border-radius: 10px; }
+.md-typeset img { border-radius: 10px; }
+.md-typeset a { text-decoration: none; }
+.md-typeset a:hover { text-decoration: underline; }
+
+/* ============ 响应式 ============ */
+@media (max-width: 900px) {
+  .isc-hero { padding: 3rem 1.2rem 2.5rem; }
+  .isc-hero__title { font-size: 2.3rem; }
+  .isc-stats { grid-template-columns: repeat(3, 1fr); }
+  .isc-entry, .isc-feature-grid, .isc-exp-grid, .isc-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .isc-hero__title { font-size: 1.9rem; }
+  .isc-stats { grid-template-columns: repeat(2, 1fr); }
+  .isc-entry, .isc-feature-grid, .isc-exp-grid, .isc-steps { grid-template-columns: 1fr; }
+  .isc-avatar img { width: 46px; height: 46px; }
+}
+
+/* ============ 经验贴「基本信息」信息卡 ============ */
+.isc-info-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.5rem 1.4rem;
+  margin: 1rem 0 1.4rem !important;
+  padding: 1.2rem 1.4rem !important;
+  border-radius: 16px;
+  list-style: none;
+  background: var(--isc-card-bg);
+  border: 1px solid var(--isc-border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+.isc-info-list li {
+  padding: 0.15rem 0;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--md-default-fg-color--light);
+}
+.isc-info-list li strong {
+  display: inline-block;
+  min-width: 4.5em;
+  margin-right: 0.3rem;
+  color: var(--md-typeset-color);
+  font-weight: 700;
+}
