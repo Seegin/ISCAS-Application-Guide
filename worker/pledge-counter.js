@@ -4,7 +4,10 @@
 //   GET  /api/pledge  → 返回当前总次数（不递增），如 {"count": 42}
 //   POST /api/pledge  → 总次数 +1，返回新总次数
 //
-// 防刷：同一 IP 24 小时内只能 POST 一次，超限返回 429（{"error":"rate_limited"}）。
+// 防刷（多层）：
+//   1. 同一 IP 24 小时内只能效忠一次
+//   2. 同一 /24 网段 24 小时内只能效忠一次（挡代理切换相近 IP 的刷子）
+//   超限均返回 429（{"error":"rate_limited"}）。
 //
 // 需要绑定一个 KV namespace，绑定变量名：PLEDGE_COUNT
 
@@ -40,12 +43,22 @@ export default {
       });
 
     if (request.method === "POST") {
-      // 防刷：同一 IP 24 小时内只能效忠一次（KV key 设 TTL 自动过期）
+      // 防刷 1：同一 IP 24 小时内只能效忠一次
       const ipKey = "rl:" + clientIP;
-      const recent = await env.PLEDGE_COUNT.get(ipKey);
-      if (recent) {
+      if (await env.PLEDGE_COUNT.get(ipKey)) {
         return json({ error: "rate_limited" }, 429);
       }
+
+      // 防刷 2：同一 /24 网段 24 小时内只能效忠一次（IPv4）
+      const parts = clientIP.split(".");
+      if (parts.length === 4) {
+        const segKey = "rls:" + parts.slice(0, 3).join(".");
+        if (await env.PLEDGE_COUNT.get(segKey)) {
+          return json({ error: "rate_limited" }, 429);
+        }
+        await env.PLEDGE_COUNT.put(segKey, String(Date.now()), { expirationTtl: 86400 });
+      }
+
       await env.PLEDGE_COUNT.put(ipKey, String(Date.now()), { expirationTtl: 86400 });
 
       // 递增总次数
