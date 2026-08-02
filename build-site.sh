@@ -18,7 +18,7 @@ else
 fi
 
 # ---- 首次运行安装依赖（已装则跳过） ----
-if ! "$PY" -c "import mkdocs_material" 2>/dev/null; then
+if ! "$PY" -c "import material" 2>/dev/null; then
   echo "首次运行：安装 mkdocs-material ..."
   "$PY" -m pip install -q --upgrade pip
   "$PY" -m pip install -q mkdocs-material
