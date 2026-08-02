@@ -1,12 +1,11 @@
 # 中科院软件所（ISCAS）考研报考指南 - 静态网站配置
 #
-# 说明：MkDocs 要求内容位于配置文件子目录，因此通过 build-site.ps1 将仓库
+# 说明：MkDocs 要求内容位于配置文件子目录，因此通过构建脚本将仓库
 # 内容同步到 docs_src/（临时构建源，不入库），再交给 MkDocs 构建。
 # 仓库里的 markdown 仍是唯一内容源。
 #
-# 本地预览:   .\build-site.ps1 -Serve        （或先跑 .\build-site.ps1 再）
-# 本地构建:   .\build-site.ps1
-# 部署方式:   后续可推送到 GitHub Pages / Vercel 等
+# 构建:   bash build-site.sh （Cloudflare Pages 的构建命令即此脚本）
+# 部署:   Cloudflare Pages，git push 后自动构建发布
 
 site_name: 中科院软件所（ISCAS）考研报考指南
 site_description: 中国科学院软件研究所考研报考指南、复试攻略与上岸经验分享

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """网站层匿名化脚本（构建期运行，仓库源文件不受影响）
 
-由 build-site.ps1 在把内容同步到 docs_src/ 之后、mkdocs build 之前调用，
+由构建脚本（build-site.sh）在把内容同步到 docs_src/ 之后、mkdocs build 之前调用，
 对 docs_src/ 中的 markdown 副本做精确字符串替换：
   * 具体学校名 → 学校层次（985 / 双非 / 四非 等）
   * 删除个别联系方式节（QQ 等）
