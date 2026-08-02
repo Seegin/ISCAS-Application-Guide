@@ -3,8 +3,7 @@
 # 供 Cloudflare Pages / CI 等 Linux 环境使用
 #
 # 用法：
-#   python -m pip install -r requirements.txt  # 首次安装锁定依赖
-#   bash build-site.sh          # 构建静态网站到 site/
+#   bash build-site.sh          # 构建静态网站到 site/（首次自动安装锁定依赖）
 
 set -euo pipefail
 cd "$(dirname "$0")"
@@ -18,10 +17,15 @@ else
   PY="python"                             # Cloudflare Pages / CI
 fi
 
-# ---- 检查构建依赖（由 requirements.txt 统一安装） ----
+# ---- 检查构建依赖（缺失时自动安装 requirements.txt 锁定依赖） ----
+# Cloudflare Pages 每次构建都是全新环境，必须自动安装，否则构建会失败。
 if ! "$PY" -c "import material" 2>/dev/null; then
-  echo "缺少构建依赖，请先运行：$PY -m pip install -r requirements.txt" >&2
-  exit 1
+  echo "首次运行：安装构建依赖（requirements.txt）..."
+  "$PY" -m pip install -q -r requirements.txt
+  if ! "$PY" -c "import material" 2>/dev/null; then
+    echo "依赖安装失败，请检查网络后重试" >&2
+    exit 1
+  fi
 fi
 
 # ---- 同步内容到构建源目录（仓库 markdown 仍是唯一内容源） ----
