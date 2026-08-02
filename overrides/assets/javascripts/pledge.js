@@ -7,7 +7,7 @@ document$.subscribe(function () {
   if (!btn) return;
 
   // TODO: 部署 Worker 后替换为真实地址
-  var PLEDGE_API = "https://YOUR-WORKER.workers.dev/api/pledge";
+  var PLEDGE_API = "https://pledge-counter.xuefeiyu2026.workers.dev/";
 
   var overlay = document.getElementById("pledge-overlay");
   var closed = false;
