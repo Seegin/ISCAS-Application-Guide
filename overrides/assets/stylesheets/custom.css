@@ -603,8 +603,8 @@ body {
 .isc-pledge-card {
   position: relative;
   width: 100%;
-  max-width: 340px;
-  padding: 2.6rem 2rem 2.2rem;
+  max-width: 300px;
+  padding: 2.4rem 1.8rem 2rem;
   text-align: center;
   border-radius: 22px;
   background: var(--isc-card-bg);
@@ -625,20 +625,15 @@ body {
   animation: isc-spin 4s linear infinite;
   pointer-events: none;
 }
-.isc-pledge-card h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--md-typeset-color);
-}
-.isc-pledge-oath {
-  margin: 0 0 1rem;
-  font-size: 1.02rem;
-  color: var(--md-default-fg-color--light);
-}
-.isc-pledge-oath b {
-  color: var(--isc-accent);
-  font-weight: 800;
+.isc-pledge-emoji {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1.2rem;
+  border-radius: 18px;
+  object-fit: cover;
+  border: 3px solid var(--isc-border);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
 }
 .isc-pledge-number {
   display: inline-block;
@@ -648,6 +643,20 @@ body {
   color: var(--md-typeset-color);
   background: var(--isc-accent-soft);
   border: 1px solid var(--isc-border);
+}
+
+/* ---------- 效忠重复点击提示（醒目渐变大字） ---------- */
+.isc-pledge-message {
+  display: block;
+  margin: 0.3rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  background: linear-gradient(120deg, var(--isc-grad-a), var(--isc-grad-b));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 @keyframes isc-pop {
   from { transform: scale(0.75); opacity: 0; }
