@@ -10,3 +10,6 @@ build-site.ps1
 
 # Python 缓存
 __pycache__/
+
+# Codex 仓库指引
+AGENTS.md
