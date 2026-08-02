@@ -659,34 +659,6 @@ body {
   color: transparent;
 }
 
-/* ---------- 操作过于频繁 toast ---------- */
-.isc-pledge-toast {
-  position: fixed;
-  top: 1.6rem;
-  left: 50%;
-  transform: translateX(-50%) translateY(-16px);
-  z-index: 200;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.72rem 1.5rem;
-  border-radius: 999px;
-  background: var(--isc-card-bg);
-  border: 1px solid var(--isc-border);
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.18);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--md-typeset-color);
-  opacity: 0;
-  pointer-events: none;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.isc-pledge-toast.show {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
 @keyframes isc-pop {
   from { transform: scale(0.75); opacity: 0; }
   to   { transform: scale(1);    opacity: 1; }

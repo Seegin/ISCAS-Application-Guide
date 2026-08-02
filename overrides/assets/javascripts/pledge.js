@@ -30,21 +30,6 @@ document$.subscribe(function () {
     }
   }
 
-  // 轻量 toast 提示（用于操作过于频繁等场景）
-  function showToast(msg) {
-    var toast = document.createElement("div");
-    toast.className = "isc-pledge-toast";
-    toast.textContent = "⏳ " + msg;
-    document.body.appendChild(toast);
-    requestAnimationFrame(function () {
-      toast.classList.add("show");
-    });
-    setTimeout(function () {
-      toast.classList.remove("show");
-      setTimeout(function () { toast.remove(); }, 320);
-    }, 2600);
-  }
-
   // 页面加载时读取当前总次数（失败则静默，保持 0）
   fetch(PLEDGE_API)
     .then(function (r) { return r.json(); })
@@ -82,9 +67,9 @@ document$.subscribe(function () {
     fetch(PLEDGE_API, { method: "POST" })
       .then(function (r) {
         if (r.status === 429) {
-          // Worker 端 IP 限流：关闭刚弹出的弹窗，改用轻量提示
-          if (overlay) overlay.hidden = true;
-          showToast("操作太频繁，请稍后再试");
+          // Worker 端同 IP 24h 内已效忠过：与本地冷却一致的提示，并记录本机冷却
+          showPledgeResult("你已经证明了你的决心", true);
+          localStorage.setItem(LAST_KEY, String(now));
           return null;
         }
         return r.json();
