@@ -1,9 +1,12 @@
 # Python 虚拟环境
 .venv/
 
-# 静态网站构建产物（由 build-site.ps1 生成）
+# 静态网站构建产物（由构建脚本生成）
 site/
 docs_src/
+
+# 本地专用构建脚本（仅本地使用，不随仓库分发）
+build-site.ps1
 
 # Python 缓存
 __pycache__/

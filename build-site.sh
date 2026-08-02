@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # 中科院软件所（ISCAS）考研报考指南 - Linux 构建脚本
-# 供 Cloudflare Pages / CI 等 Linux 环境使用（本地 Windows 请用 build-site.ps1）
+# 供 Cloudflare Pages / CI 等 Linux 环境使用
 #
 # 用法：
 #   bash build-site.sh          # 构建静态网站到 site/
