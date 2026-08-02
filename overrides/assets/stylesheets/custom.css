@@ -74,6 +74,29 @@ body {
   bottom: -120px; right: -60px;
   background: radial-gradient(circle, var(--isc-grad-b), transparent 70%);
 }
+.isc-hero__slogan {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 0 0 0.9rem;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.42em;
+  text-indent: 0.42em;
+  background: linear-gradient(120deg, var(--isc-grad-a), var(--isc-grad-b));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.isc-hero__slogan::before,
+.isc-hero__slogan::after {
+  content: "";
+  width: 2.6rem;
+  height: 1px;
+  background: var(--isc-border);
+  flex: none;
+}
 .isc-hero__title {
   position: relative;
   margin: 0 0 1rem;
