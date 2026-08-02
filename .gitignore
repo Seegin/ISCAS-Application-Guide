@@ -13,3 +13,6 @@ __pycache__/
 
 # Codex 仓库指引
 AGENTS.md
+
+# Cloudflare Worker 计数器（本地维护，部署时手动粘贴到 Cloudflare，不随仓库分发）
+worker/
