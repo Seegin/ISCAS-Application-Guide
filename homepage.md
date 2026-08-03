@@ -226,6 +226,11 @@
     本站由 <b>MkDocs</b> + <b>Material for MkDocs</b> 构建 · 内容遵循 <b>CC BY-NC-SA 4.0</b> 许可
   </div>
 
+  <!-- ---------- 免责声明 ---------- -->
+  <div class="isc-disclaimer">
+    本指南为历届考生公益维护，<b>非盈利</b>，与 <b>中科院软件研究所</b> 无任何关联，非官方渠道 · 内容仅供参考，请以官方发布为准 · <a href="免责声明/">查看详细声明 →</a>
+  </div>
+
   <!-- ---------- 效忠弹窗 ---------- -->
   <div class="isc-pledge-overlay" id="pledge-overlay" role="dialog" aria-modal="true" aria-labelledby="pledge-result" tabindex="-1" hidden>
     <div class="isc-pledge-card">

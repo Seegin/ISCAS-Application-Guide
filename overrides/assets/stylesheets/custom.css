@@ -473,6 +473,20 @@ body {
 }
 .isc-tech b { color: var(--md-typeset-color); }
 
+/* ---------- 免责声明 ---------- */
+.isc-disclaimer {
+  margin-top: 1rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: 14px;
+  background: var(--isc-card-bg);
+  border: 1px dashed var(--isc-border);
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: var(--md-default-fg-color--light);
+  text-align: center;
+}
+.isc-disclaimer a { color: var(--md-typeset-a-color); }
+
 /* ============ 内容页美化（全局） ============ */
 .md-typeset {
   font-size: 0.92rem;

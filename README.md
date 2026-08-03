@@ -8,6 +8,8 @@
 >
 > 计算所  ict：[点此加群](https://qun.qq.com/universal-share/share?ac=1&authKey=OzZAS3jeG1KhS/SchOveQuzrFB0THS3ykemropLyrii9Q0tDhWzuEfgBbATcQ14H&busi_data=eyJncm91cENvZGUiOiI3NDY1NzcyNzYiLCJ0b2tlbiI6IkpMSVJUaXhTSGJMOFM4bVluYy81NTdRa3FjZXRWdmFGWHd4eFJxelNqbTVaRnNEUkkvNGtmd0VWcjlnNG1JNHYiLCJ1aW4iOiIxODMyNjEwNjE5In0=&data=DdKFa5GnoEJznLT7tm251AcOibKm8xts-AhBy1DIdJ0DIermCL5yRGTvlBRikO8Ni-Q96X9LqWGTVMezsJtaIg&svctype=4&tempid=h5_group_info)
 
+> ⚠️ **免责声明**：本指南为历届考生公益维护，非盈利，与中科院软件研究所无任何隶属或关联关系，非官方渠道。内容仅供参考，请以官方发布为准。详见 [免责声明](免责声明.md)。
+
 现在是 2026 年七月，距离 27 考研初试还有不到 5 个月。相较于高校体系的高分需求，国科大体系无疑提供了更具性价比的选择。
 
 > *"软件所到底好不好考？" "统考名额 7+X 是真的吗？" "听说国科大刷人很厉害，三无选手推荐考吗？"*
@@ -197,4 +199,4 @@
 
 ---
 
-*最后更新：2026 年 8 月 | 维护者：@ensemble*
+*最后更新：2026 年 8 月 | 维护者：@ensemble @Hsin*
