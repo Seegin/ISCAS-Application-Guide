@@ -635,7 +635,7 @@ body {
   border: 3px solid var(--isc-border);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
 }
-.isc-pledge-number {
+.isc-pledge-result--number {
   display: inline-block;
   padding: 0.35rem 1rem;
   border-radius: 999px;
@@ -646,7 +646,7 @@ body {
 }
 
 /* ---------- 效忠重复点击提示（醒目渐变大字） ---------- */
-.isc-pledge-message {
+.isc-pledge-result--message {
   display: block;
   margin: 0.3rem 0 0;
   font-size: 1.05rem;

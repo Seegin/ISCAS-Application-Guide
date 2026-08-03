@@ -22,11 +22,12 @@ document$.subscribe(function () {
 
   // 设置弹窗提示：正常效忠用「效忠」表情 + 胶囊，重复点击用「冲刺」表情 + 渐变大字
   function showPledgeResult(html, isRejected) {
-    var num = overlay && overlay.querySelector(".isc-pledge-number");
+    var result = document.getElementById("pledge-result");
     var img = overlay && overlay.querySelector(".isc-pledge-emoji");
-    if (num) {
-      num.innerHTML = html;
-      num.className = isRejected ? "isc-pledge-message" : "isc-pledge-number";
+    if (result) {
+      result.innerHTML = html;
+      result.classList.toggle("isc-pledge-result--message", isRejected);
+      result.classList.toggle("isc-pledge-result--number", !isRejected);
     }
     if (img) {
       img.src = isRejected ? "assets/images/冲刺.jpg" : "assets/images/效忠.jpg";
