@@ -32,12 +32,14 @@ fi
 echo "同步内容到 docs_src/ ..."
 rm -rf docs_src
 mkdir -p docs_src
-cp README.md docs_src/
 cp -r 初试准备 复试准备 上岸经验分享 docs_src/
 cp 经验分享投稿模板.md CONTRIBUTORS.md docs_src/
 
 # ---- 网站层匿名化（学校名 → 层次，仅改 docs_src 副本，源文件不动） ----
 "$PY" anonymize.py docs_src
+
+# 首页已经使用公开层次描述；匿名化后再复制，避免替换链接中的原始文件路径。
+cp homepage.md docs_src/index.md
 
 # ---- 构建 ----
 "$PY" -m mkdocs build
