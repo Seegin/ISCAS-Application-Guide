@@ -14,7 +14,7 @@
 
 @[biuki4](https://github.com/biuki4)
 
-@SEEGIN
+@[Seegin](https://github.com/Seegin)
 
 @[Su Shuang](https://github.com/shusoyo)
 

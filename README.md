@@ -149,10 +149,14 @@
     <img src="https://github.com/feiyu1104.png?size=100" width="70" height="70" alt="davepearl" style="border-radius:50%; margin: 0 8px;"/>
   </a>
 
+<a href="https://github.com/Seegin">
+    <img src="https://github.com/Seegin.png?size=100" width="70" height="70" alt="davepearl" style="border-radius:50%; margin: 0 8px;"/>
+  </a>
+
 </p>
 
 <p align="center">
-  <strong>SEEGIN</strong> · <strong>迪迦</strong> · <strong>佚名同学</strong>
+<strong>迪迦</strong> · <strong>佚名同学</strong>
 </p>
 
 > 🙏 _感谢每一位愿意花时间整理经验、回答问题的同学，你们的分享是后来者最宝贵的财富。_
