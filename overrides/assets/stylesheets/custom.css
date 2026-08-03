@@ -325,7 +325,7 @@ body {
   font-size: 1.5rem;
   background: var(--isc-accent-soft);
 }
-.isc-entry-card h3 { margin: 0.8rem 0 0.4rem; font-size: 1.2rem; font-weight: 800; color: var(--md-typeset-color); }
+.isc-entry-card__title { display: block; margin: 0.8rem 0 0.4rem; font-size: 1.2rem; font-weight: 800; color: var(--md-typeset-color); }
 .isc-entry-card p { margin: 0 0 0.8rem; font-size: 0.86rem; line-height: 1.7; color: var(--md-default-fg-color--light); }
 .isc-entry-card__more { font-size: 0.86rem; font-weight: 700; color: var(--isc-accent); }
 
@@ -353,7 +353,8 @@ body {
   border-color: var(--isc-accent);
   text-decoration: none;
 }
-.isc-exp-card h4 {
+.isc-exp-card__title {
+  display: block;
   margin: 0.55rem 0 0.35rem;
   font-size: 1rem;
   font-weight: 700;
@@ -408,7 +409,7 @@ body {
   color: #fff;
   background: linear-gradient(120deg, var(--isc-grad-a), var(--isc-grad-b));
 }
-.isc-step__body h4 {
+.isc-step__title {
   margin: 0.7rem 0 0.3rem;
   font-size: 1.02rem;
   font-weight: 700;
@@ -679,6 +680,18 @@ body {
 }
 @keyframes isc-spin {
   to { transform: rotate(360deg); }
+}
+
+.isc-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

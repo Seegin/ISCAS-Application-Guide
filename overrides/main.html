@@ -1,5 +1,4 @@
-{# 首页（index）渲染自定义精装落地页 homepage.html，隐藏左侧导航；
-   其余页面保留 Material 文档布局 #}
+{# 首页隐藏左侧导航；其余页面保留 Material 文档布局 #}
 {% extends "base.html" %}
 
 {# 追加 Open Graph / Twitter 社交分享标签（转发到微信/QQ 时有预览卡片）。
@@ -24,7 +23,7 @@
 
 {% block content %}
   {% if page.is_homepage %}
-    {% include "homepage.html" %}
+    {{ page.content }}
   {% else %}
     {{ super() }}
   {% endif %}

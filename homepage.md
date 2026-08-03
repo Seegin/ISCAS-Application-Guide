@@ -1,7 +1,7 @@
-{# ============ 首页精装落地页（组件化） ============ #}
+<!-- ============ 首页精装落地页（组件化） ============ -->
 <article class="md-content__inner md-typeset isc-home">
 
-  {# ---------- Hero ---------- #}
+  <!-- ---------- Hero ---------- -->
   <section class="isc-hero">
     <p class="isc-hero__slogan">一切献给软件所</p>
     <h1 class="isc-hero__title">中科院软件所 <span class="isc-grad">考研报考指南</span></h1>
@@ -12,7 +12,7 @@
     </div>
   </section>
 
-  {# ---------- 数据统计 ---------- #}
+  <!-- ---------- 数据统计 ---------- -->
   <section class="isc-stats" aria-label="关键数据">
     <div class="isc-stat"><b>269</b><span>26 年学硕复试线</span></div>
     <div class="isc-stat"><b>300</b><span>26 年专硕复试线</span></div>
@@ -22,11 +22,11 @@
     <div class="isc-stat"><b>免学费</b><span>补助已含学费返还</span></div>
   </section>
 
-  {# ---------- 研究所概况 ---------- #}
-  <section class="isc-section" id="overview">
+  <!-- ---------- 研究所概况 ---------- -->
+  <section class="isc-section">
     <div class="isc-section__head">
       <span class="isc-pill">研究所概况</span>
-      <h2>中关村的「计算机国家队」</h2>
+      <h2 id="overview">中关村的「计算机国家队」</h2>
       <p class="isc-section__sub">中国科学院软件研究所（ISCAS）成立于 1985 年，地处北京中关村，是一所致力于计算机科学理论与软件高新技术研究的综合性研究所，覆盖计算机、软件工程、AI 大模型、系统软件、数据库、网络安全等领域。</p>
     </div>
     <div class="isc-labs">
@@ -47,11 +47,11 @@
     </div>
   </section>
 
-  {# ---------- 性价比亮点 ---------- #}
+  <!-- ---------- 性价比亮点 ---------- -->
   <section class="isc-section">
     <div class="isc-section__head">
       <span class="isc-pill">性价比</span>
-      <h2>为什么选择软件所</h2>
+      <h2 id="value">为什么选择软件所</h2>
     </div>
     <div class="isc-feature-grid">
       <div class="isc-feature"><span class="isc-feature__icon">🎓</span><b>方向丰富</b><p>可信计算、并行软件、基础软件、人机交互等，国科大计算机学科评估 A+</p></div>
@@ -64,113 +64,113 @@
     <div class="isc-tip">⚠️ <b>理性看待：</b>分数亲民意味着进复试门槛低，但复试同样有筛选（26 年学硕 13 进复试录取 9、专硕 47 进录取 39）。初试分越高，主动权越大。</div>
   </section>
 
-  {# ---------- 核心指南入口 ---------- #}
-  <section class="isc-section" id="guide">
+  <!-- ---------- 核心指南入口 ---------- -->
+  <section class="isc-section">
     <div class="isc-section__head">
       <span class="isc-pill">核心指南</span>
-      <h2>报考全流程，一篇讲清</h2>
+      <h2 id="guide">报考全流程，一篇讲清</h2>
       <p class="isc-section__sub">从初试备考到复试上岸的完整攻略，点击进入对应内容</p>
     </div>
     <div class="isc-entry">
       <a class="isc-entry-card" href="初试准备/初试报考指南/">
         <span class="isc-entry-card__icon">📘</span>
-        <h3>初试报考指南</h3>
+        <span class="isc-entry-card__title">初试报考指南</span>
         <p>招生方向 · 初试科目 · 学费待遇 · 培养情况 · 名额 · 分数线 · 报考建议</p>
         <span class="isc-entry-card__more">阅读指南 →</span>
       </a>
       <a class="isc-entry-card" href="复试准备/复试考核指南/">
         <span class="isc-entry-card__icon">🎯</span>
-        <h3>复试考核指南</h3>
+        <span class="isc-entry-card__title">复试考核指南</span>
         <p>联系导师 · 面试笔试 · 学硕调剂 · 食宿 · 实验室选择 · 南京学院代招</p>
         <span class="isc-entry-card__more">阅读指南 →</span>
       </a>
     </div>
   </section>
 
-  {# ---------- 经验分享 ---------- #}
-  <section class="isc-section" id="stories">
+  <!-- ---------- 经验分享 ---------- -->
+  <section class="isc-section">
     <div class="isc-section__head">
       <span class="isc-pill">经验分享</span>
-      <h2>上岸同学的一手经验</h2>
+      <h2 id="stories">上岸同学的一手经验</h2>
       <p class="isc-section__sub">来自不同背景上岸同学的真实备考故事，点击卡片查看全文</p>
     </div>
     <div class="isc-exp-grid">
 
       <a class="isc-exp-card" href="上岸经验分享/民办三本一战上岸国科大软件所/">
         <span class="isc-tag isc-tag--mb">民办</span>
-        <h4>民办三本一战上岸</h4>
+        <span class="isc-exp-card__title">民办三本一战上岸</span>
         <p>354 分专硕上岸 · 数学 129 · 详细时间规划</p>
       </a>
       <a class="isc-exp-card" href="上岸经验分享/双非一本一战上岸国科大软件所/">
         <span class="isc-tag isc-tag--sf">双非</span>
-        <h4>双非一本一战上岸</h4>
+        <span class="isc-exp-card__title">双非一本一战上岸</span>
         <p>省属重点本科 · 软测国一 · 毕设聚焦软件供应链安全</p>
       </a>
       <a class="isc-exp-card" href="上岸经验分享/北理工跨考国科大软件所学硕/">
         <span class="isc-tag isc-tag--985">985</span>
-        <h4>985 跨考软件所学硕</h4>
+        <span class="isc-exp-card__title">985 跨考软件所学硕</span>
         <p>自动化跨考学硕 · 6 月启动 · 张宇数学体系 + 408 策略</p>
       </a>
       <a class="isc-exp-card" href="上岸经验分享/九本科班工作两年上岸国科大软件所/">
         <span class="isc-tag isc-tag--985">985</span>
-        <h4>工作两年后上岸</h4>
+        <span class="isc-exp-card__title">工作两年后上岸</span>
         <p>英二 70+ 方法论 · 408 性价比做题策略</p>
       </a>
       <a class="isc-exp-card" href="上岸经验分享/山师科班一战上岸国科大软件所/">
         <span class="isc-tag isc-tag--sf">双非</span>
-        <h4>科班一战上岸</h4>
+        <span class="isc-exp-card__title">科班一战上岸</span>
         <p>ICPC 银牌 · 6 月末启动 · 408 各科针对性策略</p>
       </a>
       <a class="isc-exp-card" href="上岸经验分享/双非一战上岸国科大软件所（短篇）/">
         <span class="isc-tag isc-tag--sf">双非</span>
-        <h4>双非一战上岸（短篇）</h4>
+        <span class="isc-exp-card__title">双非一战上岸（短篇）</span>
         <p>2.8 绩点 · seL4 形式化验证毕设 · 复试做依赖类型内核</p>
       </a>
       <a class="isc-exp-card" href="上岸经验分享/厦大一战高分上岸国科大软件所/">
         <span class="isc-tag isc-tag--985">985</span>
-        <h4>985 科班 400+ 高分上岸</h4>
+        <span class="isc-exp-card__title">985 科班 400+ 高分上岸</span>
         <p>机器人方向毕设 · 408 回归真题 · LLM 辅助学习心得</p>
       </a>
       <a class="isc-exp-card" href="上岸经验分享/江汉大学345顺子分数一战上岸国科大软件所/">
         <span class="isc-tag isc-tag--sf4">四非</span>
-        <h4>四非 345 顺子一战上岸</h4>
+        <span class="isc-exp-card__title">四非 345 顺子一战上岸</span>
         <p>智软南京学院专硕 · 国奖 + 市长奖学金 · 复试要多准备</p>
       </a>
       <a class="isc-exp-card" href="上岸经验分享/985一战400+上岸国科大软件所（Dave）/">
         <span class="isc-tag isc-tag--985">985</span>
-        <h4>400+ 高分上岸（Dave）</h4>
+        <span class="isc-exp-card__title">400+ 高分上岸（Dave）</span>
         <p>保研边缘选手 · 每天 5h+ · 数二 150 👑</p>
       </a>
       <a class="isc-exp-card" href="上岸经验分享/双非零基础一战上岸国科大软件所（TTao）/">
         <span class="isc-tag isc-tag--sf">双非</span>
-        <h4>零基础一战上岸（TTao）</h4>
+        <span class="isc-exp-card__title">零基础一战上岸（TTao）</span>
         <p>四级四次才过 · 4 月启动 · 390+ · 坚持就是胜利</p>
       </a>
       <a class="isc-exp-card" href="上岸经验分享/四非一本一战上岸国科大软件所/">
         <span class="isc-tag isc-tag--sf4">四非</span>
-        <h4>四非一本一战上岸</h4>
+        <span class="isc-exp-card__title">四非一本一战上岸</span>
         <p>2.8 绩点 · 320+ · 两篇北核 + 专利 + 大创 · 科研翻盘</p>
       </a>
       <a class="isc-exp-card" href="上岸经验分享/四非科班上岸国科大软件所/">
         <span class="isc-tag isc-tag--sf4">四非</span>
-        <h4>四非科班上岸</h4>
+        <span class="isc-exp-card__title">四非科班上岸</span>
         <p>9 月全力开冲 · 英语 80+ · 六级 620 · 优质资料源</p>
       </a>
       <a class="isc-exp-card" href="上岸经验分享/九本三无摆子上岸国科大软件所/">
         <span class="isc-tag isc-tag--985">985</span>
-        <h4>985 三无摆子一战上岸</h4>
+        <span class="isc-exp-card__title">985 三无摆子一战上岸</span>
         <p>360+ 调剂学硕 · 摆烂选手如何上岸软所？</p>
       </a>
 
     </div>
   </section>
 
-  {# ---------- 投稿流程 ---------- #}
-  <section class="isc-section" id="contribute">
+  <!-- ---------- 投稿流程 ---------- -->
+  <section class="isc-section">
     <div class="isc-section__head isc-section__head--split">
       <div class="isc-section__text">
         <span class="isc-pill">投稿</span>
-        <h2>分享你的备考故事</h2>
+        <h2 id="contribute">分享你的备考故事</h2>
         <p class="isc-section__sub">经验分享持续征集中，一份投稿可能帮到无数后来者</p>
       </div>
       <a class="isc-btn isc-btn--soft" href="经验分享投稿模板/">查看投稿模板 →</a>
@@ -178,24 +178,24 @@
     <ol class="isc-steps">
       <li class="isc-step">
         <b class="isc-step__num">01</b>
-        <div class="isc-step__body"><h4>提交 Issue</h4><p>在仓库 Issues 页提出修改建议或补充内容，维护者会及时响应</p></div>
+        <div class="isc-step__body"><div class="isc-step__title">提交 Issue</div><p>在仓库 Issues 页提出修改建议或补充内容，维护者会及时响应</p></div>
       </li>
       <li class="isc-step">
         <b class="isc-step__num">02</b>
-        <div class="isc-step__body"><h4>提交 Pull Request</h4><p>Fork 本仓库，按投稿模板写好内容后提交 PR，审核通过即可收录</p></div>
+        <div class="isc-step__body"><div class="isc-step__title">提交 Pull Request</div><p>Fork 本仓库，按投稿模板写好内容后提交 PR，审核通过即可收录</p></div>
       </li>
       <li class="isc-step">
         <b class="isc-step__num">03</b>
-        <div class="isc-step__body"><h4>联系维护者</h4><p>不熟悉 GitHub 操作？把内容发给维护者，代为提交与整理</p></div>
+        <div class="isc-step__body"><div class="isc-step__title">联系维护者</div><p>不熟悉 GitHub 操作？把内容发给维护者，代为提交与整理</p></div>
       </li>
     </ol>
   </section>
 
-  {# ---------- 感谢名单 ---------- #}
+  <!-- ---------- 感谢名单 ---------- -->
   <section class="isc-section isc-thanks">
     <div class="isc-section__head">
       <span class="isc-pill">致谢</span>
-      <h2>感谢每一位分享者</h2>
+      <h2 id="thanks">感谢每一位分享者</h2>
       <p class="isc-section__sub">本指南的诞生离不开以下同学的热心分享与贡献</p>
     </div>
     <div class="isc-avatars">
@@ -214,23 +214,24 @@
     <p class="isc-thanks__note">迪迦 · 佚名同学 以及所有在备考群、小红书、知乎无私分享的同学——<br>一个人的经验是有限的，一群人的智慧是无限的。</p>
   </section>
 
-  {# ---------- 效忠 ---------- #}
+  <!-- ---------- 效忠 ---------- -->
   <section class="isc-pledge">
+    <h2 id="pledge" class="isc-visually-hidden">对软所效忠</h2>
     <button class="isc-pledge-btn" id="pledge-btn">⚔️ 对软所效忠</button>
     <p class="isc-pledge-hint">已有 <b class="isc-pledge-count">0</b> 位同学宣誓效忠软件所</p>
   </section>
 
-  {# ---------- 技术栈 ---------- #}
+  <!-- ---------- 技术栈 ---------- -->
   <div class="isc-tech">
     本站由 <b>MkDocs</b> + <b>Material for MkDocs</b> 构建 · 内容遵循 <b>CC BY-NC-SA 4.0</b> 许可
   </div>
 
-  {# ---------- 免责声明 ---------- #}
+  <!-- ---------- 免责声明 ---------- -->
   <div class="isc-disclaimer">
     本指南为历届考生公益维护，<b>非盈利</b>，与 <b>中科院软件研究所</b> 无任何关联，非官方渠道 · 内容仅供参考，请以官方发布为准 · <a href="免责声明/">查看详细声明 →</a>
   </div>
 
-  {# ---------- 效忠弹窗 ---------- #}
+  <!-- ---------- 效忠弹窗 ---------- -->
   <div class="isc-pledge-overlay" id="pledge-overlay" role="dialog" aria-modal="true" aria-labelledby="pledge-result" tabindex="-1" hidden>
     <div class="isc-pledge-card">
       <div class="isc-pledge-glow"></div>
