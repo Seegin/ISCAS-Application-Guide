@@ -13,10 +13,12 @@ export async function onRequest(context) {
   const method = request.method;
 
   // 透传真实客户端 IP，保证 Worker 端「同一 IP 24h 只能效忠一次」的防刷仍然有效。
-  // Cloudflare 内部链路本就会透传 CF-Connecting-IP，这里显式设置作为双保险。
+  // 注意：必须用自定义头 X-Real-IP —— CF-Connecting-IP 经 Function 转发后会被
+  // Cloudflare 覆盖成 Pages 函数节点 IP（所有用户相同），导致 Worker 把所有用户
+  // 识别为同一 IP、防刷误伤所有人、计数被锁定。X-Real-IP 不会被覆盖。
   const headers = { "Content-Type": "application/json" };
   const clientIP = request.headers.get("CF-Connecting-IP");
-  if (clientIP) headers["CF-Connecting-IP"] = clientIP;
+  if (clientIP) headers["X-Real-IP"] = clientIP;
 
   // 原样透传 Worker 的响应（GET 200 {"count":N} / POST 200 或 429 {"error":"rate_limited"}）
   return fetch(UPSTREAM, { method, headers });
