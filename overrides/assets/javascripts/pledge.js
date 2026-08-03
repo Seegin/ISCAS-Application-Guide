@@ -11,7 +11,8 @@ document$.subscribe(function () {
   var DAY_MS = 24 * 60 * 60 * 1000; // 24 小时
 
   var overlay = document.getElementById("pledge-overlay");
-  var closed = false;
+  var closeTimer = null;
+  var returnFocus = null;
   var posted = false; // 本次会话是否已成功效忠（POST 返回新计数）；置位后忽略迟到的 GET 结果
 
   function setCount(n) {
@@ -59,19 +60,38 @@ document$.subscribe(function () {
   }
   loadCount(1);
 
+  function hideOverlay() {
+    if (!overlay || overlay.hidden) return;
+    overlay.hidden = true;
+    if (closeTimer) {
+      clearTimeout(closeTimer);
+      closeTimer = null;
+    }
+    if (returnFocus && returnFocus.isConnected && typeof returnFocus.focus === "function") {
+      returnFocus.focus();
+    }
+    returnFocus = null;
+  }
+
   function showOverlay() {
     if (!overlay) return;
+    if (overlay.hidden) returnFocus = document.activeElement;
     overlay.hidden = false;
-    closed = false;
-    setTimeout(function () {
-      if (!closed) { overlay.hidden = true; closed = true; }
-    }, 3200);
+    overlay.focus();
+    if (closeTimer) clearTimeout(closeTimer);
+    closeTimer = setTimeout(hideOverlay, 3200);
   }
 
   if (overlay) {
-    overlay.addEventListener("click", function () {
-      overlay.hidden = true;
-      closed = true;
+    overlay.addEventListener("click", hideOverlay);
+    overlay.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        hideOverlay();
+      } else if (event.key === "Tab") {
+        event.preventDefault();
+        overlay.focus();
+      }
     });
   }
 

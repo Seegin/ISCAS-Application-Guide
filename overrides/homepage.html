@@ -226,11 +226,11 @@
   </div>
 
   {# ---------- 效忠弹窗 ---------- #}
-  <div class="isc-pledge-overlay" id="pledge-overlay" hidden>
+  <div class="isc-pledge-overlay" id="pledge-overlay" role="dialog" aria-modal="true" aria-labelledby="pledge-result" tabindex="-1" hidden>
     <div class="isc-pledge-card">
       <div class="isc-pledge-glow"></div>
-      <img class="isc-pledge-emoji" src="assets/images/效忠.jpg" alt="效忠软件所">
-      <span class="isc-pledge-result isc-pledge-result--number" id="pledge-result">您是第 <b class="isc-pledge-count">0</b> 位宣誓者</span>
+      <img class="isc-pledge-emoji" src="assets/images/效忠.jpg" alt="">
+      <span class="isc-pledge-result isc-pledge-result--number" id="pledge-result" role="status" aria-live="polite" aria-atomic="true">您是第 <b class="isc-pledge-count">0</b> 位宣誓者</span>
     </div>
   </div>
 
