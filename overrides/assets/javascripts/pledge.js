@@ -4,7 +4,9 @@ document$.subscribe(function () {
   var btn = document.getElementById("pledge-btn");
   if (!btn) return;
 
-  var PLEDGE_API = "https://pledge-counter.xuefeiyu2026.workers.dev/api/pledge";
+  // 同源代理：由 Cloudflare Pages Function（/api/pledge）转发到 Worker，
+  // 避免手机端跨域直连 *.workers.dev 不稳定导致总人数读不到。
+  var PLEDGE_API = "/api/pledge";
   var LAST_KEY = "pledge_last_time";
   var DAY_MS = 24 * 60 * 60 * 1000; // 24 小时
 
@@ -30,11 +32,27 @@ document$.subscribe(function () {
     }
   }
 
-  // 页面加载时读取当前总次数（失败则静默，保持 0）
-  fetch(PLEDGE_API)
-    .then(function (r) { return r.json(); })
-    .then(function (d) { setCount(d.count); })
-    .catch(function () {});
+  // 带超时的 fetch：避免手机网络下请求无限挂起
+  function fetchWithTimeout(url, timeoutMs) {
+    var ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
+    var opts = {};
+    if (ctrl) opts.signal = ctrl.signal;
+    var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, timeoutMs);
+    return fetch(url, opts).finally(function () { clearTimeout(timer); });
+  }
+
+  // 页面加载时读取当前总次数：超时 + 失败重试 1 次；仍失败则显示「—」而非误导性的 0
+  function loadCount(retryLeft) {
+    return fetchWithTimeout(PLEDGE_API, 8000)
+      .then(function (r) { return r.json(); })
+      .then(function (d) { setCount(d.count); })
+      .catch(function (err) {
+        if (retryLeft > 0) return loadCount(retryLeft - 1);
+        setCount("—");
+        console.warn("[效忠] 读取总人数失败：", err);
+      });
+  }
+  loadCount(1);
 
   function showOverlay() {
     if (!overlay) return;
