@@ -12,6 +12,7 @@ document$.subscribe(function () {
 
   var overlay = document.getElementById("pledge-overlay");
   var closed = false;
+  var posted = false; // 本次会话是否已成功效忠（POST 返回新计数）；置位后忽略迟到的 GET 结果
 
   function setCount(n) {
     document.querySelectorAll(".isc-pledge-count").forEach(function (el) {
@@ -45,7 +46,10 @@ document$.subscribe(function () {
   function loadCount(retryLeft) {
     return fetchWithTimeout(PLEDGE_API, 8000)
       .then(function (r) { return r.json(); })
-      .then(function (d) { setCount(d.count); })
+      .then(function (d) {
+        // 用户已成功效忠过（POST 返回了更新后的计数）时，迟到的 GET 不应覆盖
+        if (!posted) setCount(d.count);
+      })
       .catch(function (err) {
         if (retryLeft > 0) return loadCount(retryLeft - 1);
         setCount("—");
@@ -94,6 +98,7 @@ document$.subscribe(function () {
       })
       .then(function (d) {
         if (d) {
+          posted = true;
           setCount(d.count);
           showPledgeResult("您是第 <b>" + d.count + "</b> 位宣誓者", false);
           localStorage.setItem(LAST_KEY, String(now));
