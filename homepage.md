@@ -158,14 +158,14 @@
       <h2 id="value">为什么选择软件所</h2>
     </div>
     <div class="isc-feature-grid">
-      <div class="isc-feature"><span class="isc-feature__icon">🎓</span><b>方向丰富</b><p>可信计算、并行软件、基础软件、人机交互等，国科大计算机学科评估 A+</p></div>
-      <div class="isc-feature"><span class="isc-feature__icon">📉</span><b>分数亲民</b><p>26 年学硕线 269，仅比国家线高 5 分；同级 985 普遍 340–380+</p></div>
-      <div class="isc-feature"><span class="isc-feature__icon">🏛️</span><b>平台与地段</b><p>中科院体系、国家级重点实验室；地处中关村，实习就业资源集中</p></div>
-      <div class="isc-feature"><span class="isc-feature__icon">💰</span><b>免学费 + 高补助</b><p>研一补助 3.3 万+/年（北京），已含学费返还，读研基本自给自足</p></div>
-      <div class="isc-feature"><span class="isc-feature__icon">❤️</span><b>不歧视双非与二战</b><p>更看重初试与复试表现，大量双非上岸案例可查</p></div>
-      <div class="isc-feature"><span class="isc-feature__icon">🛡️</span><b>保护一志愿</b><p>专硕可转学硕；不接受所外调剂，一志愿权益有保障</p></div>
+      <div class="isc-feature"><span class="isc-feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><b>方向丰富</b><p>可信计算、并行软件、基础软件、人机交互等，国科大计算机学科评估 A+</p></div>
+      <div class="isc-feature"><span class="isc-feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></span><b>分数亲民</b><p>26 年学硕线 269，仅比国家线高 5 分；同级 985 普遍 340–380+</p></div>
+      <div class="isc-feature"><span class="isc-feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span><b>平台与地段</b><p>中科院体系、国家级重点实验室；地处中关村，实习就业资源集中</p></div>
+      <div class="isc-feature"><span class="isc-feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span><b>免学费 + 高补助</b><p>研一补助 3.3 万+/年（北京），已含学费返还，读研基本自给自足</p></div>
+      <div class="isc-feature"><span class="isc-feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span><b>不歧视双非与二战</b><p>更看重初试与复试表现，大量双非上岸案例可查</p></div>
+      <div class="isc-feature"><span class="isc-feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><b>保护一志愿</b><p>专硕可转学硕；不接受所外调剂，一志愿权益有保障</p></div>
     </div>
-    <div class="isc-tip">⚠️ <b>理性看待：</b>分数亲民意味着进复试门槛低，但复试同样有筛选（26 年学硕 13 进复试录取 9、专硕 47 进录取 39）。初试分越高，主动权越大。</div>
+    <div class="isc-tip"><b>理性看待：</b>分数亲民意味着进复试门槛低，但复试同样有筛选（26 年学硕 13 进复试录取 9、专硕 47 进录取 39）。初试分越高，主动权越大。</div>
   </section>
 
   <!-- ---------- 核心指南入口 ---------- -->
@@ -177,13 +177,13 @@
     </div>
     <div class="isc-entry">
       <a class="isc-entry-card" href="初试准备/初试报考指南/">
-        <span class="isc-entry-card__icon">📘</span>
+        <span class="isc-entry-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
         <span class="isc-entry-card__title">初试报考指南</span>
         <p>招生方向 · 初试科目 · 学费待遇 · 培养情况 · 名额 · 分数线 · 报考建议</p>
         <span class="isc-entry-card__more">阅读指南 →</span>
       </a>
       <a class="isc-entry-card" href="复试准备/复试考核指南/">
-        <span class="isc-entry-card__icon">🎯</span>
+        <span class="isc-entry-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
         <span class="isc-entry-card__title">复试考核指南</span>
         <p>联系导师 · 面试笔试 · 学硕调剂 · 食宿 · 实验室选择 · 南京学院代招</p>
         <span class="isc-entry-card__more">阅读指南 →</span>
@@ -281,7 +281,7 @@
       <a class="isc-exp-card" href="上岸经验分享/985一战400+上岸国科大软件所（Dave）/">
         <span class="isc-tag isc-tag--985">985</span>
         <span class="isc-exp-card__title">400+ 高分上岸（Dave）</span>
-        <p>保研边缘选手 · 每天 5h+ · 数二 150 👑</p>
+        <p>保研边缘选手 · 每天 5h+ · 数二 150</p>
       </a>
       <a class="isc-exp-card" href="上岸经验分享/双非零基础一战上岸国科大软件所（TTao）/">
         <span class="isc-tag isc-tag--sf">双非</span>
@@ -364,7 +364,7 @@
   <!-- ---------- 效忠 ---------- -->
   <section class="isc-pledge">
     <h2 id="pledge" class="isc-visually-hidden">对软所效忠</h2>
-    <button class="isc-pledge-btn" id="pledge-btn">⚔️ 对软所效忠</button>
+    <button class="isc-pledge-btn" id="pledge-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg> 对软所效忠</button>
     <p class="isc-pledge-hint">已有 <b class="isc-pledge-count">0</b> 位同学宣誓效忠软件所</p>
   </section>
 
