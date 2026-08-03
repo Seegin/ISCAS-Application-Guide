@@ -144,13 +144,11 @@
   <a href="https://github.com/davepearl">
     <img src="https://github.com/davepearl.png?size=100" width="70" height="70" alt="davepearl" style="border-radius:50%; margin: 0 8px;"/>
   </a>
-
-<a href="https://github.com/feiyu1104">
-    <img src="https://github.com/feiyu1104.png?size=100" width="70" height="70" alt="davepearl" style="border-radius:50%; margin: 0 8px;"/>
+  <a href="https://github.com/feiyu1104">
+    <img src="https://github.com/feiyu1104.png?size=100" width="70" height="70" alt="feiyu1104" style="border-radius:50%; margin: 0 8px;"/>
   </a>
-
-<a href="https://github.com/Seegin">
-    <img src="https://github.com/Seegin.png?size=100" width="70" height="70" alt="davepearl" style="border-radius:50%; margin: 0 8px;"/>
+  <a href="https://github.com/Seegin">
+    <img src="https://github.com/Seegin.png?size=100" width="70" height="70" alt="Seegin" style="border-radius:50%; margin: 0 8px;"/>
   </a>
 
 </p>
