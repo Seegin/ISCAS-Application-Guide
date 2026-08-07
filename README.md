@@ -90,6 +90,22 @@
 - 实验室选择
 - 南京学院代招
 
+历年录取情况：[24年](./复试准备/24年录取情况.md) · [25年](./复试准备/25年录取情况.md) · [26年](./复试准备/26年录取情况.md)
+
+- 复试组划分与专业方向
+- 初试 / 复试 / 总成绩
+- 拟录取 / 未录取标记
+
+**近三年数据分析图**
+
+![近三年初试均分趋势](./overrides/assets/images/fig8_init_mean_trend.png)
+
+![初试分数区间录取率](./overrides/assets/images/fig6_bracket_rate.png)
+
+![各类型录取概率对比](./overrides/assets/images/fig11_bracket_by_type.png)
+
+![专硕三年上岸率](./overrides/assets/images/fig13_zs_admit_rate.png)
+
 ---
 
 ## 经验分享
