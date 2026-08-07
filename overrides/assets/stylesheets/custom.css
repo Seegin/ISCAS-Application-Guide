@@ -3,32 +3,38 @@
    简洁 · 渐变 · 大圆角卡片 · 兼顾浅色/深色模式
    ============================================================ */
 
-/* ---------- 品牌色（覆盖 Material 主色，indigo 蓝紫系） ---------- */
+/* ---------- 品牌色（覆盖 Material 主色，墨蓝米白系） ---------- */
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color: #4f46e5;
-  --md-primary-fg-color--light: #818cf8;
-  --md-primary-fg-color--dark: #3730a3;
-  --md-accent-fg-color: #4f46e5;
-  --isc-grad-a: #4f46e5;
-  --isc-grad-b: #7c3aed;
-  --isc-accent: #4f46e5;
-  --isc-accent-soft: rgba(79, 70, 229, 0.08);
-  --isc-border: rgba(79, 70, 229, 0.14);
+  --md-primary-fg-color: #162A46;
+  --md-primary-fg-color--light: #2f4d78;
+  --md-primary-fg-color--dark: #0d1c30;
+  --md-accent-fg-color: #9a917d;
+  --isc-grad-a: #162A46;
+  --isc-grad-b: #2f4d78;
+  --isc-accent: #9a917d;
+  --isc-accent-soft: rgba(216, 208, 193, 0.30);
+  --isc-border: rgba(22, 42, 70, 0.14);
+  /* 实底按钮/色块渐变（白字需深色终点，避免浅色终点过亮） */
+  --isc-grad-btn-a: #162A46;
+  --isc-grad-btn-b: #3a63a0;
   --isc-card-bg: #ffffff;
   --isc-tip-bg: #fff7e6;
   --isc-tip-border: #f59e0b;
 }
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #818cf8;
-  --md-primary-fg-color--light: #a5b4fc;
-  --md-primary-fg-color--dark: #3730a3;
-  --md-accent-fg-color: #818cf8;
-  --isc-grad-a: #818cf8;
-  --isc-grad-b: #c084fc;
-  --isc-accent: #818cf8;
-  --isc-accent-soft: rgba(129, 140, 248, 0.14);
-  --isc-border: rgba(129, 140, 248, 0.22);
-  --isc-card-bg: #151a23;
+  --md-primary-fg-color: #24405f;
+  --md-primary-fg-color--light: #3d5f8f;
+  --md-primary-fg-color--dark: #0d1c30;
+  --md-accent-fg-color: #D8D0C1;
+  --isc-grad-a: #2f4d78;
+  --isc-grad-b: #F8F6F2;
+  --isc-accent: #D8D0C1;
+  --isc-accent-soft: rgba(216, 208, 193, 0.14);
+  --isc-border: rgba(216, 208, 193, 0.20);
+  /* 实底按钮/色块渐变（白字需深色终点，避免浅色终点过亮） */
+  --isc-grad-btn-a: #24405f;
+  --isc-grad-btn-b: #4a6fa5;
+  --isc-card-bg: #1c2434;
   --isc-tip-bg: rgba(245, 158, 11, 0.12);
   --isc-tip-border: #f59e0b;
 }
@@ -141,12 +147,12 @@ body {
 .isc-btn:hover { transform: translateY(-2px); text-decoration: none; }
 /* 按钮文字颜色用更高优先级，避免被 Material 的 .md-typeset a 覆盖 */
 .md-typeset .isc-btn--primary {
-  background: linear-gradient(120deg, var(--isc-grad-a), var(--isc-grad-b));
+  background: linear-gradient(120deg, var(--isc-grad-btn-a), var(--isc-grad-btn-b));
   color: #fff;
-  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+  box-shadow: 0 4px 14px rgba(22, 42, 70, 0.35);
 }
 .md-typeset .isc-btn--primary:hover {
-  box-shadow: 0 8px 22px rgba(79, 70, 229, 0.4);
+  box-shadow: 0 8px 22px rgba(22, 42, 70, 0.4);
   color: #fff;
 }
 .md-typeset .isc-btn--ghost {
@@ -227,6 +233,26 @@ body {
   color: var(--md-default-fg-color--light);
   font-size: 0.95rem;
   line-height: 1.8;
+}
+/* ---------- 研究所概况：标题文字 + 位置示意图并排 ---------- */
+.isc-overview {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.isc-overview__text { flex: 0 0 auto; }
+.isc-overview__text h2 { margin-top: 0; }
+.isc-overview__map {
+  flex: 0 0 auto;
+  margin: 0 auto;
+  max-height: 8rem;
+  max-width: 45%;
+  height: auto;
+  width: auto;
+  border-radius: 12px;
+  border: 1px solid var(--isc-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 /* ---------- 实验室标签 ---------- */
 .isc-labs {
@@ -417,10 +443,10 @@ body {
   letter-spacing: 0.03em;
   color: #fff;
 }
-.isc-tag--985 { background: #4f46e5; }
-.isc-tag--sf  { background: #059669; }
-.isc-tag--sf4 { background: #ea580c; }
-.isc-tag--mb  { background: #9333ea; }
+.isc-tag--985 { background: #3A3149; }
+.isc-tag--sf  { background: #1C2228; }
+.isc-tag--sf4 { background: #2B4248; }
+.isc-tag--mb  { background: #2C3E50; }
 
 /* ---------- 投稿流程 ---------- */
 .isc-steps {
@@ -447,7 +473,7 @@ body {
   font-size: 0.9rem;
   font-weight: 800;
   color: #fff;
-  background: linear-gradient(120deg, var(--isc-grad-a), var(--isc-grad-b));
+  background: linear-gradient(120deg, var(--isc-grad-btn-a), var(--isc-grad-btn-b));
 }
 .isc-step__title {
   margin: 0.7rem 0 0.3rem;
@@ -622,13 +648,13 @@ body {
   font-size: 1.1rem;
   font-weight: 700;
   color: #fff;
-  background: linear-gradient(120deg, var(--isc-grad-a), var(--isc-grad-b));
-  box-shadow: 0 6px 22px rgba(79, 70, 229, 0.4);
+  background: linear-gradient(120deg, var(--isc-grad-btn-a), var(--isc-grad-btn-b));
+  box-shadow: 0 6px 22px rgba(22, 42, 70, 0.4);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .isc-pledge-btn:hover {
   transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.5);
+  box-shadow: 0 12px 30px rgba(22, 42, 70, 0.5);
 }
 .isc-pledge-btn:active { transform: scale(0.95); }
 .isc-pledge-hint {
@@ -743,4 +769,55 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ============ 顶部导航栏「登分」入口 ============ */
+.isc-login {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 0.2rem 0.6rem 0.2rem 0.4rem;
+  padding: 0.26rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.12);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.isc-login:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.isc-login:focus-visible { outline-color: var(--md-accent-fg-color); }
+
+/* ---------- 「尚未开放」轻提示气泡 ---------- */
+.isc-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 2.2rem;
+  transform: translate(-50%, 8px);
+  z-index: 200;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--md-typeset-color);
+  background: var(--isc-card-bg);
+  border: 1px solid var(--isc-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.isc-toast--show { opacity: 1; transform: translate(-50%, 0); }
+
+/* 移动端导航栏空间有限，登分按钮略缩小 */
+@media (max-width: 600px) {
+  .isc-login { padding: 0.22rem 0.6rem; font-size: 0.74rem; }
 }

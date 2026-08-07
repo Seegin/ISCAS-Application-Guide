@@ -26,8 +26,13 @@
   <section class="isc-section">
     <div class="isc-section__head">
       <span class="isc-pill">研究所概况</span>
-      <h2 id="overview">中关村的「计算机国家队」</h2>
-      <p class="isc-section__sub">中国科学院软件研究所（ISCAS）成立于 1985 年，地处北京中关村，是一所致力于计算机科学理论与软件高新技术研究的综合性研究所，覆盖计算机、软件工程、AI 大模型、系统软件、数据库、网络安全等领域。</p>
+      <div class="isc-overview">
+        <div class="isc-overview__text">
+          <h2 id="overview">中关村的「计算机国家队」</h2>
+          <p class="isc-section__sub">中国科学院软件研究所（ISCAS）成立于 1985 年，地处北京中关村，是一所致力于计算机科学理论与软件高新技术研究的综合性研究所，覆盖计算机、软件工程、AI 大模型、系统软件、数据库、网络安全等领域。</p>
+        </div>
+        <img class="isc-overview__map" src="assets/images/iscas-map.png" alt="中科院软件所（ISCAS）位置示意图" loading="lazy">
+      </div>
     </div>
     <div class="isc-labs">
       <span class="isc-chip">基础软件与系统重点实验室</span>
@@ -242,7 +247,7 @@
 
   <!-- ---------- 免责声明 ---------- -->
   <div class="isc-disclaimer">
-    本指南为历届考生公益维护，<b>非盈利</b>，与 <b>中科院软件研究所</b> 无任何关联，非官方渠道 · 内容仅供参考，请以官方发布为准 · <a href="免责声明/">查看详细声明 →</a>
+    本指南为历届考生公益维护，<b>非盈利</b>，与 <b>中科院软件研究所</b> 无任何关联，非官方渠道 · 内容仅供参考，请以官方发布为准 · 首页位置示意图由 AI 生成，仅供参考 · <a href="免责声明/">查看详细声明 →</a>
   </div>
 
   <!-- ---------- 效忠弹窗 ---------- -->

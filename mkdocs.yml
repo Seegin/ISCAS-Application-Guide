@@ -39,14 +39,14 @@ theme:
   palette:
     # 首次访问默认使用深色主题，仍可手动切换并记住用户选择
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: "#162A46"
+      accent: "#D8D0C1"
       toggle:
         icon: material/weather-sunny
         name: 切换到浅色模式
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: "#162A46"
+      accent: "#D8D0C1"
       toggle:
         icon: material/weather-night
         name: 切换到深色模式
@@ -66,6 +66,7 @@ extra_css:
 extra_javascript:
   - assets/javascripts/info-card.js
   - assets/javascripts/pledge.js
+  - assets/javascripts/login.js
 
 markdown_extensions:
   - admonition
