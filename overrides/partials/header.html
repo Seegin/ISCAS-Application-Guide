@@ -61,8 +61,8 @@
         {% include "partials/source.html" %}
       </div>
     {% endif %}
-    {# 登分入口：接入系统后把 href 换成真实链接即可自动跳转 #}
-    <a class="isc-login" id="isc-login" href="#" title="登分">登分</a>
+    {# 登分入口：跳转到外部登分系统 #}
+    <a class="isc-login" id="isc-login" href="http://106.53.55.161/" title="登分">登分</a>
   </nav>
   {% if "navigation.tabs.sticky" in features %}
     {% if "navigation.tabs" in features %}
