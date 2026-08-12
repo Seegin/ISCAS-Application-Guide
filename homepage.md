@@ -180,6 +180,11 @@
         <span class="isc-exp-card__title">985 三无摆子一战上岸</span>
         <p>360+ 调剂学硕 · 摆烂选手如何上岸软所？</p>
       </a>
+      <a class="isc-exp-card" href="上岸经验分享/双非一本二战低分上岸国科大软件所/">
+        <span class="isc-tag isc-tag--sf">双非</span>
+        <span class="isc-exp-card__title">双非一本二战上岸</span>
+        <p>二战低分上岸 · 复试只问项目 · 附专硕调剂学硕解读</p>
+      </a>
 
     </div>
   </section>
@@ -230,7 +235,7 @@
       <a class="isc-avatar" href="https://github.com/feiyu1104" title="维护者" target="_blank" rel="noopener"><img src="https://github.com/feiyu1104.png?size=100" alt="维护者" loading="lazy"></a>
       <a class="isc-avatar" href="https://github.com/Seegin" title="Seegin" target="_blank" rel="noopener"><img src="https://github.com/Seegin.png?size=100" alt="Seegin" loading="lazy"></a>
     </div>
-    <p class="isc-thanks__note">迪迦 · 佚名同学 以及所有在备考群、小红书、知乎无私分享的同学——<br>一个人的经验是有限的，一群人的智慧是无限的。</p>
+    <p class="isc-thanks__note">迪迦 · 佚名同学 · Y 以及所有在备考群、小红书、知乎无私分享的同学——<br>一个人的经验是有限的，一群人的智慧是无限的。</p>
   </section>
 
   <!-- ---------- 效忠 ---------- -->
