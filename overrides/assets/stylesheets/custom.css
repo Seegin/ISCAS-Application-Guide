@@ -26,18 +26,18 @@
 }
 
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #123B45;
-  --md-primary-fg-color--light: #214954;
-  --md-primary-fg-color--dark: #071B22;
+  --md-primary-fg-color: #09151A;
+  --md-primary-fg-color--light: #123B45;
+  --md-primary-fg-color--dark: #071015;
   --md-accent-fg-color: #F05A3A;
-  --md-default-bg-color: #0B2632;
-  --md-default-fg-color: #F5F1E8;
-  --md-default-fg-color--light: #9FB0AE;
-  --isc-grad-a: #123B45;
-  --isc-grad-b: #F5F1E8;
+  --md-default-bg-color: #0E1B20;
+  --md-default-fg-color: #F3F0E7;
+  --md-default-fg-color--light: #96AAAD;
+  --isc-grad-a: #0B2632;
+  --isc-grad-b: #F3F0E7;
   --isc-accent: #F05A3A;
-  --isc-accent-soft: rgba(240, 90, 58, 0.16);
-  --isc-border: rgba(245, 241, 232, 0.26);
+  --isc-accent-soft: rgba(240, 90, 58, 0.14);
+  --isc-border: #2A555D;
   /* 实底按钮/色块渐变 */
   --isc-grad-btn-a: #F05A3A;
   --isc-grad-btn-b: #D94D32;
@@ -45,6 +45,7 @@
   --isc-tip-bg: rgba(217, 190, 130, 0.14);
   --isc-tip-border: #D9BE82;
 }
+
 
 
 /* ---------- 字体 ---------- */

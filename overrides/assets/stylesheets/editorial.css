@@ -183,3 +183,6 @@
   color: var(--isc-accent);
 }
 .md-typeset .isc-link:hover { background: transparent; color: var(--isc-accent); text-decoration: underline; }
+
+/* 深色模式下 Hero 底带改用低对比边框色，避免橙线过抢 */
+[data-md-color-scheme="slate"] .isc-hero { border-bottom-color: #2A555D; }
