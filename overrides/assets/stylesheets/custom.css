@@ -254,6 +254,179 @@ body {
   border: 1px solid var(--isc-border);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
+/* ---------- 研究所概况：位置优势（图片 + Top 10 距离） ---------- */
+.isc-location { margin-top: 1.6rem; }
+.isc-location__head h3,
+.isc-subhead h3 {
+  margin: 0 0 0.3rem;
+  padding: 0;
+  border-bottom: none;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--md-typeset-color);
+}
+.isc-subhead { margin-top: 1.6rem; }
+.isc-location__head .isc-section__sub { margin-bottom: 0; }
+.isc-location__head .isc-section__sub b { color: var(--isc-accent); font-weight: 800; }
+.isc-location__card {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+  margin-top: 1rem;
+  padding: 1.1rem;
+  border-radius: 20px;
+  background: var(--isc-card-bg);
+  border: 1px solid var(--isc-border);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.isc-location__card:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(0, 0, 0, 0.1); }
+.isc-location__fig {
+  margin: 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.isc-location__fig img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+.isc-location__list {
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  overflow: hidden;
+}
+.isc-loc {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+.isc-loc:hover { background: var(--isc-accent-soft); transform: translateX(2px); border-color: var(--isc-border); }
+.isc-loc__rank {
+  grid-row: 1;
+  grid-column: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.65rem;
+  height: 1.65rem;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--isc-accent);
+  background: var(--isc-accent-soft);
+}
+.isc-loc__body {
+  grid-row: 1;
+  grid-column: 2;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.isc-loc__body b {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--md-typeset-color);
+}
+.isc-loc__body small {
+  display: block;
+  font-size: 0.74rem;
+  line-height: 1.35;
+  color: var(--md-default-fg-color--light);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.isc-loc__meta {
+  grid-row: 1;
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  min-width: 4rem;
+  margin-left: 0.3rem;
+}
+.isc-loc__dist {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.2rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--md-typeset-color);
+  line-height: 1;
+}
+.isc-loc__dist small { font-size: 0.72rem; font-weight: 600; color: var(--md-default-fg-color--light); }
+.isc-loc__bar {
+  width: 3rem;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--isc-accent-soft);
+  overflow: hidden;
+}
+.isc-loc__bar::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: var(--dist, 0%);
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--isc-grad-a), var(--isc-grad-b));
+  transition: width 0.4s ease;
+}
+.isc-loc__walk {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  white-space: nowrap;
+}
+/* 前两名（字节 / 搜狐）步行可达，渐变高亮 */
+.isc-loc--top {
+  background: linear-gradient(120deg, var(--isc-grad-btn-a), var(--isc-grad-btn-b));
+  border-color: transparent;
+}
+.isc-loc--top:hover { background: linear-gradient(120deg, var(--isc-grad-btn-a), var(--isc-grad-btn-b)); border-color: transparent; }
+.isc-loc--top .isc-loc__rank { color: #fff; background: rgba(255, 255, 255, 0.18); }
+.isc-loc--top .isc-loc__body b { color: #fff; }
+.isc-loc--top .isc-loc__body small { color: rgba(255, 255, 255, 0.78); }
+.isc-loc--top .isc-loc__dist { color: #fff; }
+.isc-loc--top .isc-loc__dist small { color: rgba(255, 255, 255, 0.78); }
+.isc-loc--top .isc-loc__bar { background: rgba(255, 255, 255, 0.25); }
+.isc-loc--top .isc-loc__bar::after { background: #fff; }
+.isc-location__head .isc-section__sub a {
+  color: var(--isc-accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
 /* ---------- 实验室标签 ---------- */
 .isc-labs {
   display: flex;
@@ -382,7 +555,8 @@ body {
   background: #fff;
 }
 .isc-fig figcaption {
-  margin: 0.6rem 0.1rem 0.1rem;
+  /* Material 默认 max-width:24rem 会限宽；margin:auto 让图注盒子相对卡片水平居中 */
+  margin: 0.6rem auto 0.1rem;
   font-size: 0.85rem;
   font-weight: 700;
   text-align: center;
@@ -498,6 +672,14 @@ body {
 .isc-section__head--split .isc-section__text { flex: 1 1 18rem; }
 .isc-section__head--split .isc-btn { flex: 0 0 auto; margin-bottom: 0.2rem; }
 
+/* ---------- 居中版小节（相关站点） ---------- */
+.isc-section--center {
+  text-align: center;
+}
+.isc-section--center .isc-section__head { text-align: center; }
+.isc-section--center .isc-section__sub { margin-left: auto; margin-right: auto; }
+.isc-section--center .isc-links { justify-content: center; }
+
 /* ---------- 感谢名单 ---------- */
 .isc-thanks {
   text-align: center;
@@ -591,12 +773,33 @@ body {
   .isc-hero__title { font-size: 2.3rem; }
   .isc-stats { grid-template-columns: repeat(3, 1fr); }
   .isc-entry, .isc-feature-grid, .isc-exp-grid, .isc-steps { grid-template-columns: repeat(2, 1fr); }
+  /* 位置优势：平板端图片与列表改纵向堆叠 */
+  .isc-location__card { grid-template-columns: 1fr; }
+  .isc-location__fig img { max-width: 100%; }
 }
 @media (max-width: 600px) {
   .isc-hero__title { font-size: 1.9rem; }
   .isc-stats { grid-template-columns: repeat(2, 1fr); }
   .isc-entry, .isc-feature-grid, .isc-exp-grid, .isc-figs, .isc-steps { grid-template-columns: 1fr; }
   .isc-avatar img { width: 46px; height: 46px; }
+  /* 研究所概况：手机端标题与位置图改为纵向堆叠，图片自适应宽度并居中（桌面布局不变） */
+  .isc-overview { flex-direction: column; align-items: stretch; }
+  .isc-overview__map { margin: 0 auto; width: auto; max-width: 100%; max-height: 10rem; }
+  .isc-location__fig img { max-width: 100%; }
+  .isc-location__list { padding: 0; gap: 0.35rem; }
+  .isc-loc { padding: 0.5rem 0.6rem; gap: 0.7rem; }
+  .isc-loc__meta { min-width: 3.8rem; margin-left: 0.3rem; }
+  .isc-loc__dist { font-size: 0.95rem; }
+}
+
+/* ---------- 首页「推免生源」亮点条 ---------- */
+.isc-stats--tuimian {
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 0.4rem;
+}
+.isc-figs--tuimian { margin-top: 1.5rem; }
+@media (max-width: 900px) {
+  .isc-stats--tuimian { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ============ 经验贴「基本信息」信息卡 ============ */

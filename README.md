@@ -7,6 +7,8 @@
 > 信工所  iie ：[点此加群](https://qun.qq.com/universal-share/share?ac=1&authKey=M4yxMWHgE9yzD2vk7nGtift%2BhaP2MYfYdv56wWOgMGTD4AfY6ABZdwPC%2FHSdqfRa&busi_data=eyJncm91cENvZGUiOiI4MjI4NDEzMzMiLCJ0b2tlbiI6IkNzSE5pMnl5alNmSmRJeVNKTWhTbkZrVHFqN1dTdTJVdnZUelBBVU9NM0xUMktaTjRFU1RWdUNUU1FJQ294OU4iLCJ1aW4iOiIyNTc3NTM5MjkwIn0%3D&data=y5wvomRqO2jq6LLWp0Sxid8pyT3UmVsWo1rIIckMP9rPga6WW6Csn4mJdLPHb3496bP8Ds0zyGL2h_Jq7JnxNw&svctype=4&tempid=h5_group_info)
 >
 > 计算所  ict：[点此加群](https://qun.qq.com/universal-share/share?ac=1&authKey=OzZAS3jeG1KhS/SchOveQuzrFB0THS3ykemropLyrii9Q0tDhWzuEfgBbATcQ14H&busi_data=eyJncm91cENvZGUiOiI3NDY1NzcyNzYiLCJ0b2tlbiI6IkpMSVJUaXhTSGJMOFM4bVluYy81NTdRa3FjZXRWdmFGWHd4eFJxelNqbTVaRnNEUkkvNGtmd0VWcjlnNG1JNHYiLCJ1aW4iOiIxODMyNjEwNjE5In0=&data=DdKFa5GnoEJznLT7tm251AcOibKm8xts-AhBy1DIdJ0DIermCL5yRGTvlBRikO8Ni-Q96X9LqWGTVMezsJtaIg&svctype=4&tempid=h5_group_info)
+>
+> 沈计所  sict:[点此加群](https://qm.qq.com/cgi-bin/qm/qr?k=r9u8RmL8tXw4jCF32Pz1tOd83sFteVW1&jump_from=webapi&authKey=Itu6in4pdGnalupvoOhfjHS5fzZsjCw0hgTiBdJh8oSiq1vSH3eiDwAenGR0UsCl)
 
 > ⚠️ **免责声明**：本指南为历届考生公益维护，非盈利，与中科院软件研究所无任何隶属或关联关系，非官方渠道。内容仅供参考，请以官方发布为准。详见 [免责声明](免责声明.md)。
 
@@ -28,6 +30,27 @@
 - **招生信息**：[招生信息——中国科学院软件研究所](https://is.cas.cn/yjsjy/zsxx/)
 
 覆盖计算机、软件工程、AI 大模型、系统软件、数据库、分布式云计算、网络安全等领域。
+
+### 位置优势
+
+地处中关村核心区，互联网大厂环绕，实习就业资源高度集中。以软件所（海淀区中关村南四街 4 号）为圆心，各互联网大厂北京总部/主办公区的直线距离前十如下：
+
+| 排名 | 公司 | 北京办公地 | 直线距离 (km) |
+|:--:|:--|:--|--:|
+| 1 | 字节跳动 | 中航广场总部 | **1.56** |
+| 2 | 搜狐 | 搜狐网络大厦 | **1.60** |
+| 3 | 小米 | 小米移动互联网产业园 | 7.73 |
+| 4 | 快手 | 快手总部 | 8.05 |
+| 5 | 滴滴 | 数字山谷园区 | 8.17 |
+| 6 | 百度 | 百度大厦 | 8.46 |
+| 7 | 新浪 | 新浪大厦 | 8.58 |
+| 8 | 腾讯 | 腾讯北京总部大楼 | 8.63 |
+| 9 | 网易 | 网易大楼 | 8.73 |
+| 10 | 爱奇艺 | 爱奇艺青春中心 | 10.46 |
+
+![北京大厂距软件所直线距离 Top 10 示意图](./overrides/assets/images/fig_location_advantage.png)
+
+> 📡 数据来源：高德地图 Web 服务 API（v5 地点搜索、地理编码），2026-08 实测；距离为两点间直线距离（Haversine 公式），仅供参考，非驾车/通勤距离。完整数据见 [北京大厂距软件所直线距离](./复试准备/北京大厂距中科院软件研究所距离.md)。
 
 ### 招生实验室
 

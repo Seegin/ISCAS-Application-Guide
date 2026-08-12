@@ -34,6 +34,105 @@
         <img class="isc-overview__map" src="assets/images/iscas-map.png" alt="中科院软件所（ISCAS）位置示意图" loading="lazy">
       </div>
     </div>
+    <!-- ---------- 位置优势：图片 + Top 10 距离 ---------- -->
+    <div class="isc-location">
+      <div class="isc-location__head">
+        <h3 id="location">地理位置优越，与互联网大厂为邻</h3>
+        <p class="isc-section__sub">以软件所（海淀区中关村南四街 4 号）为圆心，互联网大厂北京总部 / 主办公区直线距离 Top 10。字节跳动中航广场总部距软件所仅 <b>1.56 km</b>，搜狐网络大厦 <b>1.60 km</b>，前 9 名均在 9 km 内。<a class="isc-location__more" href="复试准备/北京大厂距中科院软件研究所距离/">查看完整数据 →</a></p>
+      </div>
+      <div class="isc-location__card">
+        <figure class="isc-location__fig">
+          <img src="assets/images/fig_location_advantage.png" alt="北京互联网大厂距软件所直线距离示意图" loading="lazy">
+        </figure>
+        <ol class="isc-location__list">
+          <li class="isc-loc isc-loc--top" style="--dist: 15%">
+            <span class="isc-loc__rank">1</span>
+            <span class="isc-loc__body"><b>字节跳动</b><small>中航广场总部</small></span>
+            <span class="isc-loc__meta">
+              <span class="isc-loc__dist">1.56<small>km</small></span>
+              <span class="isc-loc__bar"></span>
+              <span class="isc-loc__walk">步行可达</span>
+            </span>
+          </li>
+          <li class="isc-loc isc-loc--top" style="--dist: 15%">
+            <span class="isc-loc__rank">2</span>
+            <span class="isc-loc__body"><b>搜狐</b><small>搜狐网络大厦</small></span>
+            <span class="isc-loc__meta">
+              <span class="isc-loc__dist">1.60<small>km</small></span>
+              <span class="isc-loc__bar"></span>
+              <span class="isc-loc__walk">步行可达</span>
+            </span>
+          </li>
+          <li class="isc-loc" style="--dist: 74%">
+            <span class="isc-loc__rank">3</span>
+            <span class="isc-loc__body"><b>小米</b><small>小米移动互联网产业园</small></span>
+            <span class="isc-loc__meta">
+              <span class="isc-loc__dist">7.73<small>km</small></span>
+              <span class="isc-loc__bar"></span>
+            </span>
+          </li>
+          <li class="isc-loc" style="--dist: 77%">
+            <span class="isc-loc__rank">4</span>
+            <span class="isc-loc__body"><b>快手</b><small>快手总部</small></span>
+            <span class="isc-loc__meta">
+              <span class="isc-loc__dist">8.05<small>km</small></span>
+              <span class="isc-loc__bar"></span>
+            </span>
+          </li>
+          <li class="isc-loc" style="--dist: 78%">
+            <span class="isc-loc__rank">5</span>
+            <span class="isc-loc__body"><b>滴滴</b><small>数字山谷园区</small></span>
+            <span class="isc-loc__meta">
+              <span class="isc-loc__dist">8.17<small>km</small></span>
+              <span class="isc-loc__bar"></span>
+            </span>
+          </li>
+          <li class="isc-loc" style="--dist: 81%">
+            <span class="isc-loc__rank">6</span>
+            <span class="isc-loc__body"><b>百度</b><small>百度大厦</small></span>
+            <span class="isc-loc__meta">
+              <span class="isc-loc__dist">8.46<small>km</small></span>
+              <span class="isc-loc__bar"></span>
+            </span>
+          </li>
+          <li class="isc-loc" style="--dist: 82%">
+            <span class="isc-loc__rank">7</span>
+            <span class="isc-loc__body"><b>新浪</b><small>新浪大厦</small></span>
+            <span class="isc-loc__meta">
+              <span class="isc-loc__dist">8.58<small>km</small></span>
+              <span class="isc-loc__bar"></span>
+            </span>
+          </li>
+          <li class="isc-loc" style="--dist: 83%">
+            <span class="isc-loc__rank">8</span>
+            <span class="isc-loc__body"><b>腾讯</b><small>腾讯北京总部大楼</small></span>
+            <span class="isc-loc__meta">
+              <span class="isc-loc__dist">8.63<small>km</small></span>
+              <span class="isc-loc__bar"></span>
+            </span>
+          </li>
+          <li class="isc-loc" style="--dist: 84%">
+            <span class="isc-loc__rank">9</span>
+            <span class="isc-loc__body"><b>网易</b><small>网易大楼</small></span>
+            <span class="isc-loc__meta">
+              <span class="isc-loc__dist">8.73<small>km</small></span>
+              <span class="isc-loc__bar"></span>
+            </span>
+          </li>
+          <li class="isc-loc" style="--dist: 100%">
+            <span class="isc-loc__rank">10</span>
+            <span class="isc-loc__body"><b>爱奇艺</b><small>爱奇艺青春中心</small></span>
+            <span class="isc-loc__meta">
+              <span class="isc-loc__dist">10.46<small>km</small></span>
+              <span class="isc-loc__bar"></span>
+            </span>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="isc-subhead">
+      <h3 id="labs">招生实验室</h3>
+    </div>
     <div class="isc-labs">
       <span class="isc-chip">基础软件与系统重点实验室</span>
       <span class="isc-chip">并行软件与计算科学实验室</span>
@@ -102,6 +201,30 @@
     <div class="isc-figs">
       <figure class="isc-fig isc-fig--feature">
         <img src="assets/images/fig13_zs_admit_rate.png" alt="专硕三年上岸率" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ---------- 推免生源统计 ---------- -->
+  <section class="isc-section">
+    <div class="isc-section__head isc-section__head--split">
+      <div class="isc-section__text">
+        <span class="isc-pill">推免生源</span>
+        <h2 id="tuimian">优质生源，汇聚软件所</h2>
+        <p class="isc-section__sub">2020-2026 年推免拟录取 713 人，覆盖全国 121 所高校；Top 30 生源高校中 985 占 71.4%、985/211 合计占 96.8%</p>
+      </div>
+      <a class="isc-btn isc-btn--soft" href="复试准备/推免生源统计/">查看完整统计 →</a>
+    </div>
+    <div class="isc-stats isc-stats--tuimian">
+      <div class="isc-stat"><b>713</b><span>7 年推免拟录取</span></div>
+      <div class="isc-stat"><b>121</b><span>生源高校总数</span></div>
+      <div class="isc-stat"><b>71.4%</b><span>Top30 生源中 985 占比</span></div>
+      <div class="isc-stat"><b>96.8%</b><span>Top30 生源中 985/211 占比</span></div>
+    </div>
+    <div class="isc-figs isc-figs--tuimian">
+      <figure class="isc-fig isc-fig--feature">
+        <img src="assets/images/fig_tuimian_school.png" alt="推免生源高校 Top 15（2020-2026 累计）" loading="lazy">
+        <figcaption>推免生源高校 Top 15（2020-2026 累计）</figcaption>
       </figure>
     </div>
   </section>
@@ -252,8 +375,21 @@
 
   <!-- ---------- 免责声明 ---------- -->
   <div class="isc-disclaimer">
-    本指南为历届考生公益维护，<b>非盈利</b>，与 <b>中科院软件研究所</b> 无任何关联，非官方渠道 · 内容仅供参考，请以官方发布为准 · 首页位置示意图由 AI 生成，仅供参考 · <a href="免责声明/">查看详细声明 →</a>
+    本指南为历届考生公益维护，<b>非盈利</b>，与 <b>中科院软件研究所</b> 无任何关联，非官方渠道 · 内容仅供参考，请以官方发布为准 · 首页位置示意图及大厂距离图由 AI 生成，距离数据仅供参考 · 兄弟研究所报考指南站内容与本指南无关 · <a href="免责声明/">查看详细声明 →</a>
   </div>
+
+  <!-- ---------- 相关站点 ---------- -->
+  <section class="isc-section isc-section--center">
+    <div class="isc-section__head">
+      <span class="isc-pill">相关站点</span>
+      <h2 id="sites">兄弟院校报考指南</h2>
+      <p class="isc-section__sub">中科院体系内兄弟研究所的报考指南站，供择校对比参考</p>
+    </div>
+    <div class="isc-links">
+      <a class="isc-btn isc-btn--soft" href="https://iie.cskaoyan.cn" title="iie.cskaoyan.cn" target="_blank" rel="noopener">中科院信工所报考指南 ↗</a>
+      <a class="isc-btn isc-btn--soft" href="https://sict.cskaoyan.cn" title="sict.cskaoyan.cn" target="_blank" rel="noopener">中科院沈计所报考指南 ↗</a>
+    </div>
+  </section>
 
   <!-- ---------- 效忠弹窗 ---------- -->
   <div class="isc-pledge-overlay" id="pledge-overlay" role="dialog" aria-modal="true" aria-labelledby="pledge-result" tabindex="-1" hidden>
