@@ -1024,3 +1024,37 @@ body {
 @media (max-width: 600px) {
   .isc-login { padding: 0.22rem 0.6rem; font-size: 0.74rem; }
 }
+
+/* ---------- 软所去向收集入口 ---------- */
+.isc-alumni {
+  display: grid;
+  align-items: stretch;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.isc-alumni-card {
+  display: block;
+  padding: 0.6rem;
+  background: var(--isc-card-bg);
+  border: 1px solid var(--isc-border);
+  border-radius: 14px;
+  color: var(--md-typeset-color);
+  text-align: center;
+  text-decoration: none;
+}
+.isc-alumni-card:hover { border-color: var(--isc-accent); text-decoration: none; }
+.isc-alumni-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 8 / 5;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.isc-alumni-card__title { display: block; margin: 0.8rem 0 0.2rem; font-size: 1.05rem; font-weight: 700; color: var(--md-typeset-color); }
+.isc-alumni-card__more { font-size: 0.85rem; font-weight: 700; color: var(--isc-accent); }
+@media (max-width: 600px) {
+  .isc-alumni { grid-template-columns: 1fr; }
+}

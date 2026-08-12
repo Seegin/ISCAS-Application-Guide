@@ -229,6 +229,30 @@
     </div>
   </section>
 
+  <!-- ---------- 软所去向收集 ---------- -->
+  <section class="isc-section">
+    <div class="isc-section__head isc-section__head--split">
+      <div class="isc-section__text">
+        <span class="isc-pill">软所去向</span>
+        <h2 id="alumni">毕业生去向收集</h2>
+        <p class="isc-section__sub">各实验室毕业生去了哪里，整理成一张可核对的去向表。目前为初步占位，欢迎提供线索</p>
+      </div>
+      <a class="isc-btn isc-btn--soft" href="软所去向收集/">进入去向收集 →</a>
+    </div>
+    <div class="isc-alumni">
+      <a class="isc-alumni-card" href="软所去向收集/">
+        <img src="assets/images/alumni-overview.svg" alt="毕业生去向总览占位图" loading="lazy">
+        <span class="isc-alumni-card__title">去向总览</span>
+        <span class="isc-alumni-card__more">查看详情 →</span>
+      </a>
+      <a class="isc-alumni-card" href="实验室去向收集/">
+        <img src="assets/images/alumni-lab.svg" alt="实验室到去向占位图" loading="lazy">
+        <span class="isc-alumni-card__title">实验室到去向</span>
+        <span class="isc-alumni-card__more">查看详情 →</span>
+      </a>
+    </div>
+  </section>
+
   <!-- ---------- 经验分享 ---------- -->
   <section class="isc-section">
     <div class="isc-section__head">
