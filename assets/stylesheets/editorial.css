@@ -1,0 +1,188 @@
+/* ============================================================
+   编辑风格（Editorial）覆盖层：参考 sict.cskaoyan.cn 审美
+   仅调整视觉（颜色/字体/圆角/边框/留白），不修改任何文案
+   ============================================================ */
+
+/* ---------- 标题衬线、正文无衬线 ---------- */
+.isc-home h1, .isc-home h2, .isc-home h3,
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "SimSun", "Songti SC", serif;
+}
+
+/* ---------- Hero：全宽深色首屏、左对齐、去光斑 ---------- */
+.isc-hero {
+  margin: -1rem -1.4rem 0;
+  padding: 4.2rem 2rem 3.6rem;
+  border-radius: 0;
+  text-align: left;
+  background: linear-gradient(180deg, #0B2632 0%, #123B45 100%);
+}
+.isc-hero::before, .isc-hero::after { display: none; }
+.isc-hero__slogan {
+  color: #D9BE82;
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
+}
+.isc-hero__slogan::before, .isc-hero__slogan::after { background: rgba(245, 241, 232, 0.35); }
+.isc-hero__title { color: #F5F1E8 !important; font-weight: 600; }
+.isc-grad {
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  color: #F05A3A;
+}
+.isc-hero__subtitle { color: rgba(245, 241, 232, 0.82); margin-left: 0; }
+.isc-hero__actions { justify-content: flex-start; }
+
+/* ---------- 按钮：矩形、实色、无阴影 ---------- */
+.isc-btn { border-radius: 2px; }
+.isc-btn:hover { transform: none; }
+.md-typeset .isc-btn--primary {
+  background: var(--isc-grad-btn-a);
+  box-shadow: none;
+}
+.md-typeset .isc-btn--primary:hover { box-shadow: none; color: #fff; }
+.md-typeset .isc-btn--ghost { background: rgba(245, 241, 232, 0.08); color: #F5F1E8; }
+.md-typeset .isc-btn--ghost:hover { border-color: var(--isc-accent); }
+
+/* ---------- 数据统计条：连续分栏，无卡片 ---------- */
+.isc-stats {
+  gap: 0;
+  border-top: 1px solid var(--isc-border);
+  border-bottom: 1px solid var(--isc-border);
+}
+.isc-stat {
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+  border-right: 1px solid var(--isc-border);
+  box-shadow: none;
+  padding: 1.4rem 0.5rem;
+}
+.isc-stat:last-child { border-right: 0; }
+.isc-stat:hover { transform: none; box-shadow: none; }
+.isc-stat b {
+  font-weight: 600;
+  background: none;
+  color: var(--isc-accent);
+}
+
+/* ---------- 章节眉题：珊瑚橙小字，无胶囊背景 ---------- */
+.isc-pill {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+.isc-pill::before { content: "— "; }
+
+/* ---------- 章节：大留白、左对齐标题 ---------- */
+.isc-section { margin: 4.2rem 0 0; }
+.isc-section__head { margin-bottom: 1.8rem; }
+.isc-section__head h2 { font-size: 1.9rem; font-weight: 600; letter-spacing: 0; }
+.isc-section__head h3, .isc-subhead h3 { font-weight: 600; }
+
+/* ---------- 卡片：近直角、细边框、无阴影 ---------- */
+.isc-location__card, .isc-feature, .isc-entry-card, .isc-fig,
+.isc-exp-card, .isc-step, .isc-pledge, .isc-info-list, .isc-pledge-card {
+  border-radius: 2px;
+  box-shadow: none;
+}
+.isc-location__card:hover, .isc-feature:hover, .isc-entry-card:hover,
+.isc-fig:hover, .isc-exp-card:hover { transform: none; box-shadow: none; }
+.isc-feature__icon, .isc-entry-card__icon, .isc-loc__rank, .isc-step__num {
+  border-radius: 2px;
+}
+.isc-overview__map, .isc-location__fig img, .isc-fig img,
+.isc-pledge-emoji, .isc-avatar img { border-radius: 2px; }
+.isc-loc { border-radius: 2px; }
+.isc-chip { border-radius: 2px; }
+.isc-loc--top { background: var(--isc-card-bg); border-color: var(--isc-border); }
+.isc-loc--top:hover { background: var(--isc-accent-soft); border-color: var(--isc-border); }
+.isc-loc--top .isc-loc__rank { color: var(--isc-accent); background: var(--isc-accent-soft); }
+.isc-loc--top .isc-loc__body b { color: var(--md-typeset-color); }
+.isc-loc--top .isc-loc__body small { color: var(--md-default-fg-color--light); }
+.isc-loc--top .isc-loc__dist { color: var(--md-typeset-color); }
+.isc-loc--top .isc-loc__dist small { color: var(--md-default-fg-color--light); }
+.isc-loc--top .isc-loc__bar { background: var(--isc-accent-soft); }
+.isc-loc--top .isc-loc__bar::after { background: var(--isc-accent); }
+
+/* ---------- 内容页：标题与引用改编辑风 ---------- */
+.md-typeset h1 { font-weight: 600; letter-spacing: 0; }
+.md-typeset h2, .md-typeset h3 { font-weight: 600; }
+.md-typeset blockquote { border-radius: 0 2px 2px 0; }
+.md-typeset .admonition, .md-typeset details { border-radius: 2px; }
+.md-typeset table:not([class]) { border-radius: 2px; box-shadow: none; }
+.md-typeset code { border-radius: 2px; }
+.md-typeset pre > code { border-radius: 2px; }
+.md-typeset img { border-radius: 2px; }
+
+/* ---------- 效忠按钮 ---------- */
+.isc-pledge-btn {
+  border-radius: 2px;
+  background: var(--isc-grad-btn-a);
+  box-shadow: none;
+}
+.isc-pledge-btn:hover { transform: none; box-shadow: none; }
+
+/* ---------- 软所去向收集入口 ---------- */
+.isc-alumni {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+.isc-alumni-card {
+  display: block;
+  padding: 0.8rem;
+  background: var(--isc-card-bg);
+  border: 1px solid var(--isc-border);
+  border-radius: 2px;
+  color: var(--md-typeset-color);
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+.isc-alumni-card:hover { border-color: var(--isc-accent); text-decoration: none; }
+.isc-alumni-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  background: #FCFAF3;
+}
+.isc-alumni-card__title {
+  display: block;
+  margin: 0.8rem 0 0.2rem;
+  font-family: "Noto Serif SC", "Source Han Serif SC", "SimSun", "Songti SC", serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--md-typeset-color);
+}
+.isc-alumni-card__more {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--isc-accent);
+}
+@media (max-width: 600px) {
+  .isc-alumni { grid-template-columns: 1fr; }
+}
+/* ---------- 微调：Hero 底部橙带衔接统计条 ---------- */
+.isc-hero { border-bottom: 4px solid var(--isc-accent); }
+.isc-stats { margin-top: 0; }
+
+/* ---------- 微调：去向入口按钮改文字链接，去按钮感 ---------- */
+.md-typeset .isc-link {
+  background: transparent;
+  border: 0;
+  padding: 0.4rem 0;
+  color: var(--isc-accent);
+}
+.md-typeset .isc-link:hover { background: transparent; color: var(--isc-accent); text-decoration: underline; }
+
+/* 深色模式下 Hero 底带改用低对比边框色，避免橙线过抢 */
+[data-md-color-scheme="slate"] .isc-hero { border-bottom-color: #2A555D; }
