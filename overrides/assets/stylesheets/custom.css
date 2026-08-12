@@ -1025,7 +1025,7 @@ body {
   .isc-login { padding: 0.22rem 0.6rem; font-size: 0.74rem; }
 }
 
-/* ---------- 软所去向收集入口 ---------- */
+/* ---------- 毕业去向收集入口 ---------- */
 .isc-alumni {
   display: grid;
   align-items: stretch;
@@ -1054,7 +1054,6 @@ body {
   border-radius: 10px;
 }
 .isc-alumni-card__title { display: block; margin: 0.8rem 0 0.2rem; font-size: 1.05rem; font-weight: 700; color: var(--md-typeset-color); }
-.isc-alumni-card__more { font-size: 0.85rem; font-weight: 700; color: var(--isc-accent); }
 @media (max-width: 600px) {
   .isc-alumni { grid-template-columns: 1fr; }
 }

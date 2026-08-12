@@ -229,26 +229,24 @@
     </div>
   </section>
 
-  <!-- ---------- 软所去向收集 ---------- -->
+  <!-- ---------- 毕业去向收集 ---------- -->
   <section class="isc-section">
     <div class="isc-section__head isc-section__head--split">
       <div class="isc-section__text">
-        <span class="isc-pill">软所去向</span>
+        <span class="isc-pill">毕业去向</span>
         <h2 id="alumni">毕业生去向收集</h2>
         <p class="isc-section__sub">各实验室毕业生去了哪里，整理成一张可核对的去向表。目前为初步占位，欢迎提供线索</p>
       </div>
-      <a class="isc-btn isc-btn--soft" href="软所去向收集/">进入去向收集 →</a>
+      <a class="isc-btn isc-btn--soft" href="毕业去向/毕业去向收集/">查看完整内容</a>
     </div>
     <div class="isc-alumni">
-      <a class="isc-alumni-card" href="软所去向收集/">
+      <a class="isc-alumni-card" href="毕业去向/毕业去向收集/">
         <img src="assets/images/alumni-overview.svg" alt="毕业生去向总览占位图" loading="lazy">
         <span class="isc-alumni-card__title">去向总览</span>
-        <span class="isc-alumni-card__more">查看详情 →</span>
       </a>
-      <a class="isc-alumni-card" href="实验室去向收集/">
+      <a class="isc-alumni-card" href="毕业去向/实验室去向收集/">
         <img src="assets/images/alumni-lab.svg" alt="实验室到去向占位图" loading="lazy">
-        <span class="isc-alumni-card__title">实验室到去向</span>
-        <span class="isc-alumni-card__more">查看详情 →</span>
+        <span class="isc-alumni-card__title">实验室去向</span>
       </a>
     </div>
   </section>
@@ -304,8 +302,8 @@
       </a>
       <a class="isc-exp-card" href="上岸经验分享/985一战400+上岸国科大软件所（Dave）/">
         <span class="isc-tag isc-tag--985">985</span>
-        <span class="isc-exp-card__title">400+ 高分上岸（Dave）</span>
-        <p>保研边缘选手 · 每天 5h+ · 数二 150 👑</p>
+        <span class="isc-exp-card__title">400+ 高分上岸（Dave）👑</span>
+        <p>保研边缘选手 · 每天 5h+ · 数二 150</p>
       </a>
       <a class="isc-exp-card" href="上岸经验分享/双非零基础一战上岸国科大软件所（TTao）/">
         <span class="isc-tag isc-tag--sf">双非</span>
