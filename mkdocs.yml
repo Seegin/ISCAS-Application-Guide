@@ -39,14 +39,14 @@ theme:
   palette:
     # 首次访问默认使用深色主题，仍可手动切换并记住用户选择
     - scheme: slate
-      primary: "#162A46"
-      accent: "#D8D0C1"
+      primary: "#0B2632"
+      accent: "#F05A3A"
       toggle:
         icon: material/weather-sunny
         name: 切换到浅色模式
     - scheme: default
-      primary: "#162A46"
-      accent: "#D8D0C1"
+      primary: "#0B2632"
+      accent: "#F05A3A"
       toggle:
         icon: material/weather-night
         name: 切换到深色模式
@@ -63,6 +63,7 @@ hooks:
 # 全局自定义样式与脚本（文件放在 overrides/ 下，构建时复制到 site 根）
 extra_css:
   - assets/stylesheets/custom.css
+  - assets/stylesheets/editorial.css
 extra_javascript:
   - assets/javascripts/info-card.js
   - assets/javascripts/pledge.js
@@ -93,6 +94,7 @@ nav:
           - 24 年录取情况: 复试准备/24年录取情况.md
           - 25 年录取情况: 复试准备/25年录取情况.md
           - 26 年录取情况: 复试准备/26年录取情况.md
+  - 软所去向收集: 软所去向收集.md
   - 上岸经验分享:
       - 民办三本一战上岸国科大软件所: 上岸经验分享/民办三本一战上岸国科大软件所.md
       - 双非一本一战上岸国科大软件所: 上岸经验分享/双非一本一战上岸国科大软件所.md

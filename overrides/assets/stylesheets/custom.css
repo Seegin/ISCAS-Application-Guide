@@ -5,39 +5,47 @@
 
 /* ---------- 品牌色（覆盖 Material 主色，墨蓝米白系） ---------- */
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color: #162A46;
-  --md-primary-fg-color--light: #2f4d78;
-  --md-primary-fg-color--dark: #0d1c30;
-  --md-accent-fg-color: #9a917d;
-  --isc-grad-a: #162A46;
-  --isc-grad-b: #2f4d78;
-  --isc-accent: #9a917d;
-  --isc-accent-soft: rgba(216, 208, 193, 0.30);
-  --isc-border: rgba(22, 42, 70, 0.14);
-  /* 实底按钮/色块渐变（白字需深色终点，避免浅色终点过亮） */
-  --isc-grad-btn-a: #162A46;
-  --isc-grad-btn-b: #3a63a0;
-  --isc-card-bg: #ffffff;
-  --isc-tip-bg: #fff7e6;
-  --isc-tip-border: #f59e0b;
+  --md-primary-fg-color: #0B2632;
+  --md-primary-fg-color--light: #123B45;
+  --md-primary-fg-color--dark: #071B22;
+  --md-accent-fg-color: #F05A3A;
+  --md-default-bg-color: #F3F0E7;
+  --md-default-fg-color: #17333A;
+  --md-default-fg-color--light: #405862;
+  --isc-grad-a: #0B2632;
+  --isc-grad-b: #123B45;
+  --isc-accent: #F05A3A;
+  --isc-accent-soft: rgba(240, 90, 58, 0.10);
+  --isc-border: rgba(11, 38, 50, 0.24);
+  /* 实底按钮/色块渐变 */
+  --isc-grad-btn-a: #F05A3A;
+  --isc-grad-btn-b: #D94D32;
+  --isc-card-bg: #FCFAF3;
+  --isc-tip-bg: rgba(217, 190, 130, 0.22);
+  --isc-tip-border: #D9BE82;
 }
+
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #24405f;
-  --md-primary-fg-color--light: #3d5f8f;
-  --md-primary-fg-color--dark: #0d1c30;
-  --md-accent-fg-color: #D8D0C1;
-  --isc-grad-a: #2f4d78;
-  --isc-grad-b: #F8F6F2;
-  --isc-accent: #D8D0C1;
-  --isc-accent-soft: rgba(216, 208, 193, 0.14);
-  --isc-border: rgba(216, 208, 193, 0.20);
-  /* 实底按钮/色块渐变（白字需深色终点，避免浅色终点过亮） */
-  --isc-grad-btn-a: #24405f;
-  --isc-grad-btn-b: #4a6fa5;
-  --isc-card-bg: #1c2434;
-  --isc-tip-bg: rgba(245, 158, 11, 0.12);
-  --isc-tip-border: #f59e0b;
+  --md-primary-fg-color: #123B45;
+  --md-primary-fg-color--light: #214954;
+  --md-primary-fg-color--dark: #071B22;
+  --md-accent-fg-color: #F05A3A;
+  --md-default-bg-color: #0B2632;
+  --md-default-fg-color: #F5F1E8;
+  --md-default-fg-color--light: #9FB0AE;
+  --isc-grad-a: #123B45;
+  --isc-grad-b: #F5F1E8;
+  --isc-accent: #F05A3A;
+  --isc-accent-soft: rgba(240, 90, 58, 0.16);
+  --isc-border: rgba(245, 241, 232, 0.26);
+  /* 实底按钮/色块渐变 */
+  --isc-grad-btn-a: #F05A3A;
+  --isc-grad-btn-b: #D94D32;
+  --isc-card-bg: #123B45;
+  --isc-tip-bg: rgba(217, 190, 130, 0.14);
+  --isc-tip-border: #D9BE82;
 }
+
 
 /* ---------- 字体 ---------- */
 body {
