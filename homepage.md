@@ -22,6 +22,30 @@
     <div class="isc-stat"><b>免学费</b><span>补助已含学费返还</span></div>
   </section>
 
+  <!-- ---------- 推免生源统计 ---------- -->
+  <section class="isc-section">
+    <div class="isc-section__head isc-section__head--split">
+      <div class="isc-section__text">
+        <span class="isc-pill">推免生源</span>
+        <h2 id="tuimian">优质生源，汇聚软件所</h2>
+        <p class="isc-section__sub">2020-2026 年推免拟录取 713 人，覆盖全国 121 所高校；Top 30 生源高校中 985 占 71.4%、985/211 合计占 96.8%</p>
+      </div>
+      <a class="isc-btn isc-btn--soft" href="复试准备/推免生源统计/">查看完整统计 →</a>
+    </div>
+    <div class="isc-stats isc-stats--tuimian">
+      <div class="isc-stat"><b>713</b><span>7 年推免拟录取</span></div>
+      <div class="isc-stat"><b>121</b><span>生源高校总数</span></div>
+      <div class="isc-stat"><b>71.4%</b><span>Top30 生源中 985 占比</span></div>
+      <div class="isc-stat"><b>96.8%</b><span>Top30 生源中 985/211 占比</span></div>
+    </div>
+    <div class="isc-figs isc-figs--tuimian">
+      <figure class="isc-fig isc-fig--feature">
+        <img src="assets/images/fig_tuimian_school.png" alt="推免生源高校 Top 15（2020-2026 累计）" loading="lazy">
+        <figcaption>推免生源高校 Top 15（2020-2026 累计）</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <!-- ---------- 软所去向收集 ---------- -->
   <section class="isc-section">
     <div class="isc-section__head isc-section__head--split">
@@ -225,30 +249,6 @@
     <div class="isc-figs">
       <figure class="isc-fig isc-fig--feature">
         <img src="assets/images/fig13_zs_admit_rate.png" alt="专硕三年上岸率" loading="lazy">
-      </figure>
-    </div>
-  </section>
-
-  <!-- ---------- 推免生源统计 ---------- -->
-  <section class="isc-section">
-    <div class="isc-section__head isc-section__head--split">
-      <div class="isc-section__text">
-        <span class="isc-pill">推免生源</span>
-        <h2 id="tuimian">优质生源，汇聚软件所</h2>
-        <p class="isc-section__sub">2020-2026 年推免拟录取 713 人，覆盖全国 121 所高校；Top 30 生源高校中 985 占 71.4%、985/211 合计占 96.8%</p>
-      </div>
-      <a class="isc-btn isc-btn--soft" href="复试准备/推免生源统计/">查看完整统计 →</a>
-    </div>
-    <div class="isc-stats isc-stats--tuimian">
-      <div class="isc-stat"><b>713</b><span>7 年推免拟录取</span></div>
-      <div class="isc-stat"><b>121</b><span>生源高校总数</span></div>
-      <div class="isc-stat"><b>71.4%</b><span>Top30 生源中 985 占比</span></div>
-      <div class="isc-stat"><b>96.8%</b><span>Top30 生源中 985/211 占比</span></div>
-    </div>
-    <div class="isc-figs isc-figs--tuimian">
-      <figure class="isc-fig isc-fig--feature">
-        <img src="assets/images/fig_tuimian_school.png" alt="推免生源高校 Top 15（2020-2026 累计）" loading="lazy">
-        <figcaption>推免生源高校 Top 15（2020-2026 累计）</figcaption>
       </figure>
     </div>
   </section>
